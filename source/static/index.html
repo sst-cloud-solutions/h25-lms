@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuard LMS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .markdown b { font-weight: bold; color: #60a5fa; }
+        .markdown ul { list-style-type: disc; margin-left: 20px; }
+        #history-panel { transition: transform 0.3s ease-in-out; }
+        .hidden-panel { transform: translateX(100%); }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 h-screen flex flex-col font-sans overflow-hidden">
+
+    <!-- LOGIN MODAL -->
+    <div id="login-modal" class="fixed inset-0 bg-slate-950/95 z-50 flex items-center justify-center backdrop-blur-md">
+        <div class="bg-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-700 w-full max-w-md text-center">
+            <div class="mb-6">
+                <div class="w-16 h-16 bg-blue-600 rounded-full mx-auto flex items-center justify-center mb-4 animate-pulse shadow-[0_0_20px_rgba(37,99,235,0.5)]">
+                    <span class="text-3xl">🛡️</span>
+                </div>
+                <h2 class="text-2xl font-bold text-white">CyberGuard Access</h2>
+                <p class="text-slate-400 text-sm mt-2">Select topic and login</p>
+            </div>
+            
+            <!-- TOPIC SELECTOR -->
+            <select id="topic-select" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 mb-4 focus:border-blue-500 text-white appearance-none cursor-pointer">
+                <option>Loading topics...</option>
+            </select>
+
+            <input type="text" id="username-input" 
+                class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 mb-2 focus:border-blue-500 text-white text-center"
+                placeholder="Enter Username (e.g., 'admin' or your name)">
+
+            <input type="password" id="password-input" 
+                class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 mb-4 focus:border-blue-500 text-white text-center"
+                placeholder="Password (Required only for Admin)">
+                
+            <button onclick="handleLogin()" 
+                class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-lg transition shadow-lg">
+                Start Session
+            </button>
+        </div>
+    </div>
+
+    <!-- ADMIN MODAL -->
+    <div id="admin-modal" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center hidden">
+        <div class="bg-slate-800 p-6 rounded-xl border border-slate-600 w-3/4 h-3/4 flex flex-col">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-red-400">Admin Analytics Dashboard</h2>
+                <button onclick="toggleAdmin()" class="text-slate-400 hover:text-white">&times;</button>
+            </div>
+            <div class="flex-1 overflow-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-slate-700 text-xs uppercase text-slate-300">
+                        <tr>
+                            <th class="p-3">User ID</th>
+                            <th class="p-3">Level</th>
+                            <th class="p-3">Score</th>
+                            <th class="p-3">Attempts</th>
+                            <th class="p-3">Accuracy</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-table-body" class="text-sm text-slate-300 divide-y divide-slate-700">
+                        <!-- Data injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="bg-slate-800 p-4 shadow-lg border-b border-slate-700 flex justify-between items-center z-10">
+        <div class="flex items-center gap-3">
+            <div class="relative">
+                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            </div>
+            <div>
+                <h1 class="text-lg font-bold tracking-wide text-blue-400">CyberGuard LMS</h1>
+                <p class="text-[10px] text-slate-500 uppercase">USER: <span id="user-display" class="text-white font-mono">GUEST</span> | TOPIC: <span id="topic-display" class="text-blue-300">ALL</span></p>
+            </div>
+        </div>
+        
+        <div class="flex gap-2 md:gap-4">
+            <!-- Admin Button (Hidden by default) -->
+            <button id="admin-btn" onclick="loadAdminStats()" class="hidden bg-red-900/50 hover:bg-red-900 border border-red-700 text-red-300 px-3 rounded-lg text-sm transition">
+                👁️ Admin
+            </button>
+
+            <div class="bg-slate-700/50 px-4 py-1 rounded-lg border border-slate-600 flex flex-col items-center min-w-[60px]">
+                <span class="text-[10px] text-slate-400 font-bold">LEVEL</span>
+                <span id="diff" class="text-yellow-400 font-bold text-lg">1</span>
+            </div>
+            <div class="bg-slate-700/50 px-4 py-1 rounded-lg border border-slate-600 flex flex-col items-center min-w-[60px]">
+                <span class="text-[10px] text-slate-400 font-bold">SCORE</span>
+                <span id="score" class="text-green-400 font-bold text-lg">0</span>
+            </div>
+            <button onclick="toggleHistory()" class="bg-slate-700 hover:bg-slate-600 px-3 rounded-lg border border-slate-500 transition text-slate-300 text-sm">
+                📜 Log
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN AREA -->
+    <div class="flex flex-1 overflow-hidden relative">
+        <div id="chat-box" class="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth pb-20">
+            <div class="flex justify-start">
+                <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 max-w-[85%] shadow-md">
+                    <p class="text-sm text-slate-400 mb-1 font-bold">AI Tutor</p>
+                    <p>Welcome. Please type <b>'start'</b> to begin your assessment.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HISTORY PANEL -->
+        <div id="history-panel" class="absolute top-0 right-0 w-64 h-full bg-slate-900 border-l border-slate-700 shadow-2xl hidden-panel z-20 p-4 overflow-y-auto">
+            <div class="flex justify-between items-center border-b border-slate-700 pb-2 mb-4">
+                <h3 class="text-slate-400 text-xs font-bold uppercase">Log</h3>
+                <button onclick="toggleHistory()" class="text-slate-500 hover:text-white">&times;</button>
+            </div>
+            <div id="history-list" class="space-y-2 text-xs text-slate-500 italic text-center">No history yet.</div>
+        </div>
+    </div>
+
+    <!-- INPUT -->
+    <div class="p-4 bg-slate-800 border-t border-slate-700 z-10">
+        <div class="max-w-4xl mx-auto relative">
+            <span id="latency" class="absolute -top-8 right-0 text-xs text-slate-500 font-mono opacity-0">Latency: 0ms</span>
+            <div class="flex gap-2">
+                <input type="text" id="user-input" class="flex-1 bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none text-white" placeholder="Type your answer..." onkeypress="handleKey(event)">
+                <button onclick="sendMessage()" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-lg font-bold transition">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let userId = "guest"; 
+        let selectedTopic = "All Topics";
+
+        // --- INIT ---
+        window.onload = async () => {
+            // Fetch Topics
+            try {
+                const res = await fetch('/api/topics');
+                const data = await res.json();
+                const select = document.getElementById('topic-select');
+                select.innerHTML = data.topics.map(t => `<option value="${t}">${t}</option>`).join('');
+            } catch (e) { console.error("Topic fetch failed"); }
+        };
+
+        // --- AUTH & ADMIN ---
+        function handleLogin() {
+            const usernameInput = document.getElementById('username-input');
+            const passwordInput = document.getElementById('password-input');
+            const inputName = usernameInput.value.trim();
+            const inputPass = passwordInput.value.trim();
+
+            if (inputName) {
+                // 1. Admin Check: Requires password 'admin'
+                if (inputName.toLowerCase() === 'admin') {
+                    if (inputPass === 'admin') {
+                        userId = inputName;
+                        document.getElementById('admin-btn').classList.remove('hidden');
+                        finalizeLogin();
+                    } else {
+                        alert("❌ Invalid Admin Password. Access Denied.");
+                        passwordInput.value = ""; // Clear password
+                        return; // Stop execution
+                    }
+                } 
+                // 2. Regular User Check: No password needed
+                else {
+                    userId = inputName;
+                    document.getElementById('admin-btn').classList.add('hidden');
+                    finalizeLogin();
+                }
+            } else {
+                alert("Please enter a username.");
+            }
+        }
+
+        function finalizeLogin() {
+            selectedTopic = document.getElementById('topic-select').value;
+            
+            document.getElementById('user-display').innerText = userId;
+            document.getElementById('topic-display').innerText = selectedTopic.toUpperCase();
+            document.getElementById('login-modal').style.display = 'none';
+        }
+
+        async function loadAdminStats() {
+            try {
+                // Hackathon "secret" key hardcoded for demo
+                const res = await fetch('/api/admin/stats?key=admin_secret_123');
+                const sessions = await res.json();
+                const tbody = document.getElementById('admin-table-body');
+                
+                tbody.innerHTML = Object.entries(sessions).map(([uid, data]) => {
+                    const acc = data.total_attempts ? Math.round((data.correct_attempts/data.total_attempts)*100) : 0;
+                    return `
+                        <tr class="hover:bg-slate-700/50">
+                            <td class="p-3 font-mono text-blue-300">${uid}</td>
+                            <td class="p-3"><span class="bg-yellow-900/50 text-yellow-400 px-2 py-1 rounded text-xs">${data.difficulty}</span></td>
+                            <td class="p-3 font-bold text-green-400">${data.score}</td>
+                            <td class="p-3">${data.total_attempts}</td>
+                            <td class="p-3">${acc}%</td>
+                        </tr>
+                    `;
+                }).join('');
+                
+                toggleAdmin();
+            } catch (e) { alert("Admin Access Denied"); }
+        }
+
+        function toggleAdmin() {
+            const modal = document.getElementById('admin-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        function toggleHistory() {
+            document.getElementById('history-panel').classList.toggle('hidden-panel');
+        }
+
+        // --- CHAT LOGIC ---
+        async function sendMessage() {
+            const input = document.getElementById('user-input');
+            const msg = input.value.trim();
+            if (!msg) return;
+
+            appendMessage("You", msg, "user");
+            input.value = '';
+            
+            const startTime = Date.now();
+
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        message: msg, 
+                        user_id: userId,
+                        topic: selectedTopic 
+                    })
+                });
+                const data = await res.json();
+                
+                const latency = Date.now() - startTime;
+                document.getElementById('latency').innerText = `Latency: ${latency}ms`;
+                document.getElementById('latency').style.opacity = 1;
+
+                let type = "ai";
+                if (data.feedback === "correct") type = "correct";
+                if (data.feedback === "wrong") type = "wrong";
+                
+                appendMessage("AI Tutor", data.reply, type);
+                
+                // Update Stats
+                if(data.state) {
+                    document.getElementById('score').innerText = data.state.score;
+                    document.getElementById('diff').innerText = data.state.difficulty;
+                    updateHistory(data.state.history);
+                }
+
+            } catch (e) {
+                appendMessage("System", "Error: " + e.message, "error");
+            }
+        }
+
+        function updateHistory(history) {
+            const list = document.getElementById('history-list');
+            if (!history || history.length === 0) return;
+            list.innerHTML = history.map(h => `
+                <div class="bg-slate-800 p-2 rounded border border-slate-700 text-xs mb-2">
+                    <div class="flex justify-between mb-1">
+                        <span class="${h.result === '✅' ? 'text-green-400' : 'text-red-400'} font-bold">${h.result}</span>
+                        <span class="text-slate-500">${h.timestamp || ''}</span>
+                    </div>
+                    <div class="text-slate-300 truncate">${h.question}</div>
+                </div>
+            `).reverse().join('');
+        }
+
+        function appendMessage(sender, text, type) {
+            const div = document.createElement('div');
+            div.className = `flex ${type === 'user' ? 'justify-end' : 'justify-start'}`;
+            let bgClass = "bg-slate-800 border-slate-700";
+            if (type === 'user') bgClass = "bg-blue-900 border-blue-800 text-blue-50";
+            if (type === 'correct') bgClass = "bg-green-900/20 border-green-800 text-green-100";
+            if (type === 'wrong') bgClass = "bg-red-900/20 border-red-800 text-red-100";
+
+            div.innerHTML = `
+                <div class="${bgClass} border rounded-xl p-4 max-w-[85%] shadow-md markdown text-sm leading-relaxed">
+                    <p class="text-xs opacity-50 mb-1 font-bold uppercase">${sender}</p>
+                    <div>${text.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')}</div>
+                </div>
+            `;
+            document.getElementById('chat-box').appendChild(div);
+            document.getElementById('chat-box').scrollTop = document.getElementById('chat-box').scrollHeight;
+        }
+
+        function handleKey(e) { if (e.key === 'Enter') sendMessage(); }
+
+        // Bind Enter key to login for both fields
+        document.getElementById('username-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') handleLogin();
+        });
+        document.getElementById('password-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') handleLogin();
+        });
+    </script>
+</body>
+</html>

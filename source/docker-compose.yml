@@ -1,0 +1,13 @@
+
+
+services:
+  lms-app:
+    build: .
+    container_name: lms_hackathon_container
+    ports:
+      - "8001:8000"  # Hosted on port 8001
+    environment:
+      - GEMINI_KEY=${GEMINI_KEY} 
+    volumes:
+      - .:/app           # Maps source code for live updates
+      - ../data:/data    # MAPS THE DATA FOLDER to /data inside container
