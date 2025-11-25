@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberSecure LMS | AI Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script>
+    // Check for saved theme preference or use system preference
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.theme = 'dark';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.theme = 'light';
+    }
+  </script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <i class="fas fa-shield-alt" style="margin-right: 10px; color: var(--accent);"></i>
+      <span>CyberSecure LMS (AI)</span>
+    </div>
+    <div id="nav-links"></div>
+    <div id="nav-user" style="display: flex; align-items: center; gap: 15px;">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MAIN BODY -->
+  <div class="container">
+    <h1>AI-Powered Cybersecurity Training</h1>
+    <p>
+      Welcome to the LMS where cybersecurity training becomes interactive,
+      adaptive, and intelligent. Learn through real-time simulated phishing,
+      password security analysis, and adaptive questioning powered by AI.
+    </p>
+
+    <hr />
+
+    <!-- 🔑 LOGIN -->
+    <h2>Login</h2>
+    <form id="login-form">
+      <div>
+        <label>Email</label><br />
+        <input type="email" id="login-email" required />
+      </div>
+
+      <div style="margin-top:6px;">
+        <label>Password</label><br />
+        <input type="password" id="login-password" required />
+      </div>
+
+      <button type="submit" class="btn-primary" style="margin-top:10px;">
+        Login
+      </button>
+
+      <p id="login-error" style="color:#ff6b6b;margin-top:8px;"></p>
+    </form>
+
+    <hr style="margin:25px 0;" />
+
+    <!-- 🆕 REGISTER -->
+    <h2>Create an Account</h2>
+    <form id="register-form">
+      <div>
+        <label>Name</label><br />
+        <input type="text" id="reg-name" required />
+      </div>
+
+      <div style="margin-top:6px;">
+        <label>Email</label><br />
+        <input type="email" id="reg-email" required />
+      </div>
+
+      <div style="margin-top:6px;">
+        <label>Password</label><br />
+        <input type="password" id="reg-password" required />
+      </div>
+
+      <button type="submit" class="btn-secondary" style="margin-top:10px;">
+        Register
+      </button>
+
+      <p id="register-error" style="margin-top:8px;"></p>
+    </form>
+
+    <hr style="margin:25px 0;" />
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script>
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const icon = themeToggle.querySelector('i');
+    
+    // Update icon based on current theme
+    function updateIcon() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    }
+    
+    // Toggle theme
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.theme = newTheme;
+      updateIcon();
+    });
+    
+    // Initialize icon
+    updateIcon();
+  </script>
+
+  <script>
+    // Remove Home and Login links from navbar on index page
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.getElementById('nav-links');
+      if (navLinks) {
+        // Clear all links - we don't want Home or Login on the index page
+        navLinks.innerHTML = '';
+      }
+    });
+
+    // --- LOGIN HANDLER ---
+    const loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById('login-email').value.trim();
+      const password = document.getElementById('login-password').value.trim();
+      const errorText = document.getElementById('login-error');
+      errorText.textContent = "";
+
+      try {
+        const data = await apiRequest('/auth/login', {
+          method: 'POST',
+          body: { email, password }
+        });
+
+        saveAuth(data.token, data.user);
+        window.location.href = "/dashboard.html";
+      } catch (err) {
+        errorText.textContent = err.message;
+      }
+    });
+
+    // --- REGISTER HANDLER ---
+    const regForm = document.getElementById('register-form');
+    regForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('reg-name').value.trim();
+      const email = document.getElementById('reg-email').value.trim();
+      const password = document.getElementById('reg-password').value.trim();
+      const regError = document.getElementById('register-error');
+
+      regError.style.color = "#ff6b6b";
+      regError.textContent = "";
+
+      try {
+        const data = await apiRequest('/auth/register', {
+          method: 'POST',
+          body: { name, email, password }
+        });
+
+        saveAuth(data.token, data.user);
+        window.location.href = "/dashboard.html";
+      } catch (err) {
+        regError.style.color = "#ff6b6b";
+        regError.textContent = err.message;
+      }
+    });
+  </script>
+
+</body>
+</html>

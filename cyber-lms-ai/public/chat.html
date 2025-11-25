@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CyberSecure LMS | Training</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div>🔐 CyberSecure LMS (AI)</div>
+    <div id="nav-links"></div>
+    <div id="nav-user"></div>
+  </nav>
+
+  <!-- MAIN TRAINING AREA -->
+  <div class="container">
+    <h2>Cybersecurity Conversational Training</h2>
+    <p style="font-size:14px;color:#9ca3af;">
+      Answer the questions below. Difficulty will adapt based on your performance,
+      and AI will guide you with explanations and feedback.
+    </p>
+
+    <!-- CATEGORY SELECTOR (only shown before session starts) -->
+    <div id="category-selector" style="margin-bottom:12px;">
+      <label style="display:block;margin-bottom:6px;font-weight:bold;">Select Learning Module (Optional):</label>
+      <select id="category-select" style="width:100%;padding:8px;border-radius:6px;border:1px solid #cbd5e1;">
+        <option value="">All Categories (Mixed)</option>
+        <!-- Filled by chat.js -->
+      </select>
+      <p style="font-size:12px;color:#9ca3af;margin-top:4px;">
+        Choose a specific cybersecurity topic to focus on, or leave as "All Categories" for mixed training.
+      </p>
+    </div>
+
+    <!-- CHAT WINDOW -->
+    <div class="chat-box" id="chat-box">
+      <!-- Messages will be injected by chat.js -->
+    </div>
+
+    <!-- ANSWER SECTION -->
+    <div style="margin-top:12px;">
+      <!-- Multiple-choice buttons -->
+      <div id="options-container"></div>
+
+      <!-- Optional free-text reasoning -->
+      <textarea
+        id="answer-input"
+        rows="2"
+        style="width:100%;margin-top:8px;"
+        placeholder="(Optional) Explain why you chose this answer..."
+      ></textarea>
+
+      <button id="send-btn" class="btn-primary" style="margin-top:8px;">
+        Submit Answer
+      </button>
+    </div>
+
+    <!-- STATS / PROGRESS -->
+    <div id="stats" style="margin-top:12px;font-size:14px;color:#9ca3af;">
+      <!-- Filled by chat.js -->
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/chat.js"></script>
+</body>
+</html>

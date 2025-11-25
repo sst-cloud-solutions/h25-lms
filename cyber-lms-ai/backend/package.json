@@ -1,0 +1,26 @@
+{
+    "name": "cyber-lms-ai",
+    "version": "1.0.0",
+    "description": "AI-powered cybersecurity LMS with conversational UI and adaptive difficulty",
+    "main": "server.js",
+    "scripts": {
+      "dev": "nodemon server.js",
+      "start": "node server.js",
+      "load-questions": "node scripts/loadQuestions.js",
+      "seed-questions": "node scripts/seedQuestions.js",
+      "seed-users": "node scripts/seedUsers.js"
+    },
+    "dependencies": {
+      "@google/generative-ai": "^0.11.0",
+      "bcryptjs": "^2.4.3",
+      "cors": "^2.8.5",
+      "dotenv": "^16.4.0",
+      "express": "^4.19.0",
+      "jsonwebtoken": "^9.0.2",
+      "mongoose": "^8.5.0"
+    },
+    "devDependencies": {
+      "nodemon": "^3.1.0"
+    }
+  }
+  
