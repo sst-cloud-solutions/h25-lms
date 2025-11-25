@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="logo-large">
+            <i class="fas fa-shield-alt"></i>
+            <h1>CyberGuard</h1>
+        </div>
+        <h2>Create Account</h2>
+        
+        <form method="post">
+            {% csrf_token %}
+            
+            <!-- Iterate over fields to render them cleanly -->
+            {% for field in form %}
+                <div class="form-group">
+                    <label>{{ field.label }}</label>
+                    {{ field }}
+                    <!-- Hide the default help text using CSS or just don't render field.help_text -->
+                    {% if field.errors %}
+                        <div style="color: #ef4444; font-size: 0.8rem; margin-top: 5px;">
+                            {{ field.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            
+            <button type="submit" class="btn-primary">Register</button>
+        </form>
+        
+        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </div>
+</div>
+
+<!-- Add some specific CSS to hide the raw lists if they still appear -->
+<style>
+    .auth-card ul { display: none; } /* Hides default error lists if any */
+    .helptext { display: none; }     /* Hides Django's default help text */
+    
+    /* Style the inputs to look good */
+    .form-group input {
+        width: 100%;
+        padding: 12px;
+        background: #0f172a;
+        border: 1px solid #334155;
+        border-radius: 6px;
+        color: white;
+        outline: none;
+    }
+    .form-group input:focus {
+        border-color: #3b82f6;
+    }
+</style>
+{% endblock %}

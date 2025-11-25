@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav class="sidebar">
+    <div class="logo">
+        <i class="fas fa-shield-alt"></i> CyberGuard
+    </div>
+    <div class="user-info">
+        <div class="avatar">{{ student.user.username|slice:":1"|upper }}</div>
+        <div>
+            <h4>{{ student.user.username }}</h4>
+            <span>Level <span id="level-display">{{ student.level }}</span></span>
+        </div>
+    </div>
+    <ul class="nav-menu">
+        <li class="active"><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
+        <li><a href="#"><i class="fas fa-book"></i> Modules</a></li>
+        <li><a href="#"><i class="fas fa-chart-bar"></i> Progress</a></li>
+        <li>
+            <form method="post" action="{% url 'logout' %}" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" style="background:none;border:none;color:var(--text-dim);cursor:pointer;padding:0;font-size:1rem;">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </form>
+        </li>
+    </ul>
+</nav>
+
+<main class="main-content">
+    <header>
+        <h1>Security Dashboard</h1>
+        <div class="status">
+            <span class="dot"></span> System Secure
+        </div>
+    </header>
+
+    <div class="stats-row">
+        <div class="card stat-card">
+            <div class="icon"><i class="fas fa-star"></i></div>
+            <div class="info">
+                <h3>Total Score</h3>
+                <p id="score-display">{{ student.score }}</p>
+            </div>
+        </div>
+        <div class="card stat-card">
+            <div class="icon fire"><i class="fas fa-fire"></i></div>
+            <div class="info">
+                <h3>Current Streak</h3>
+                <p id="streak-display">{{ student.streak }}</p>
+            </div>
+        </div>
+        <div class="card stat-card">
+            <div class="icon"><i class="fas fa-trophy"></i></div>
+            <div class="info">
+                <h3>Rank</h3>
+                <p>Top 10%</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="modules-section">
+        <h2>Training Modules</h2>
+        <div class="modules-grid">
+            <div class="card module-card" onclick="startModule('phishing')">
+                <div class="icon-bg"><i class="fas fa-envelope-open-text"></i></div>
+                <h3>Phishing</h3>
+                <p>Identify suspicious emails.</p>
+                <button>Start</button>
+            </div>
+            <div class="card module-card" onclick="startModule('passwords')">
+                <div class="icon-bg"><i class="fas fa-key"></i></div>
+                <h3>Passwords</h3>
+                <p>Create strong credentials.</p>
+                <button>Start</button>
+            </div>
+            <div class="card module-card" onclick="startModule('malware')">
+                <div class="icon-bg"><i class="fas fa-bug"></i></div>
+                <h3>Malware</h3>
+                <p>Detect malicious software.</p>
+                <button>Start</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<aside class="chat-panel">
+    <div class="chat-header">
+        <h3>CyberGuard AI</h3>
+        <span class="status-dot"></span>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+        <div class="message bot">
+            <div class="bubble">
+                Hello {{ student.user.username }}! I'm ready to train you. Select a module to start a quiz or ask me anything.
+            </div>
+        </div>
+    </div>
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Type your answer..." onkeypress="handleEnter(event)">
+        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+    </div>
+</aside>
+{% endblock %}
