@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Node modules (if any frontend)
+node_modules/
+
+# Docker
+*.log
+
+# OS files
+.DS_Store
