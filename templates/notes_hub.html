@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study Notes - TeachMate AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header"><i class="fas fa-shield-alt"></i> TeachMate AI</div>
+            <ul class="nav-menu">
+                <li><a href="/dashboard" class="nav-link"><i class="fas fa-arrow-left"></i> Dashboard</a></li>
+                <li><a href="/notes" class="nav-link active"><i class="fas fa-book"></i> Study Notes</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Study Notes Library</h3>
+                </div>
+                <div class="notes-hub-grid" style="padding: 20px;">
+                    {% for m in modules %}
+                    <div class="note-card">
+                        <h4>{{ m.name }}</h4>
+                        <p>{{ m.description }}</p>
+                        <a href="/notes/{{ m.id }}" class="btn-primary" style="display: block; margin-top: 10px; text-decoration: none; text-align: center;">Read Book</a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

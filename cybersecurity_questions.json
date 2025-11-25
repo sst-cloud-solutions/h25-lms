@@ -1,0 +1,5232 @@
+{
+  "categories": [
+    {
+      "id": "basic-phishing",
+      "name": "Basic Phishing Recognition",
+      "description": "Fundamental concepts of identifying phishing attempts",
+      "questions": [
+        {
+          "id": "basic-001",
+          "difficulty": 1,
+          "question": "What is phishing?",
+          "options": [
+            "A type of fish",
+            "A cyber attack that uses disguised email as a weapon",
+            "A computer virus",
+            "A type of firewall"
+          ],
+          "correct_answer": 1,
+          "explanation": "Phishing is a cyber attack where attackers disguise themselves as trustworthy entities to trick individuals into revealing sensitive information."
+        },
+        {
+          "id": "basic-002",
+          "difficulty": 1,
+          "question": "Which of the following is a common sign of a phishing email?",
+          "options": [
+            "Professional grammar and spelling",
+            "Urgent language demanding immediate action",
+            "Personalized greeting with your name",
+            "Email from a known colleague"
+          ],
+          "correct_answer": 1,
+          "explanation": "Phishing emails often create urgency to pressure victims into acting quickly without thinking."
+        },
+        {
+          "id": "basic-003",
+          "difficulty": 1,
+          "question": "What should you do if you receive a suspicious email asking for your password?",
+          "options": [
+            "Reply with your password",
+            "Click the link to verify",
+            "Contact IT security or the supposed sender directly",
+            "Ignore it and delete"
+          ],
+          "correct_answer": 2,
+          "explanation": "Always verify suspicious requests through official channels, not through the suspicious email itself."
+        },
+        {
+          "id": "basic-004",
+          "difficulty": 2,
+          "question": "Which email address format is most suspicious?",
+          "options": [
+            "support@company.com",
+            "john.doe@company-email.org",
+            "admin@company.co",
+            "hr@company.com"
+          ],
+          "correct_answer": 1,
+          "explanation": "Slight variations in domain names (like company-email.org instead of company.com) are common phishing tactics."
+        },
+        {
+          "id": "basic-005",
+          "difficulty": 2,
+          "question": "What does 'HTTPS' indicate in a website URL?",
+          "options": [
+            "The site is faster",
+            "The site has a secure connection",
+            "The site is mobile-friendly",
+            "The site uses HTML5"
+          ],
+          "correct_answer": 1,
+          "explanation": "HTTPS indicates a secure, encrypted connection. However, even HTTPS sites can be phishing sites."
+        },
+        {
+          "id": "basic-006",
+          "difficulty": 2,
+          "question": "Which attachment type should you be most cautious about opening?",
+          "options": [
+            ".pdf documents",
+            ".exe files",
+            ".jpg images",
+            ".txt files"
+          ],
+          "correct_answer": 1,
+          "explanation": "Executable files (.exe) can contain malware and are commonly used in phishing attacks."
+        },
+        {
+          "id": "basic-007",
+          "difficulty": 3,
+          "question": "What is 'spear phishing'?",
+          "options": [
+            "Fishing with a spear",
+            "Targeted phishing attacks using personal information",
+            "Mass email phishing",
+            "Phishing through phone calls"
+          ],
+          "correct_answer": 1,
+          "explanation": "Spear phishing is a targeted attack that uses personal information to make the phishing attempt more convincing."
+        },
+        {
+          "id": "basic-008",
+          "difficulty": 3,
+          "question": "Which of these URLs looks legitimate?",
+          "options": [
+            "https://paypal-secure.com/login",
+            "https://www.paypal.com/login",
+            "https://paypal.login.com",
+            "https://secure-paypal.net"
+          ],
+          "correct_answer": 1,
+          "explanation": "The official PayPal URL uses www.paypal.com. Variations with hyphens or different domains are suspicious."
+        },
+        {
+          "id": "basic-009",
+          "difficulty": 3,
+          "question": "What is a common phishing tactic called 'pretexting'?",
+          "options": [
+            "Using fake websites",
+            "Creating false scenarios to gain information",
+            "Sending mass emails",
+            "Using malware"
+          ],
+          "correct_answer": 1,
+          "explanation": "Pretexting involves creating a fabricated scenario to obtain information from the victim."
+        },
+        {
+          "id": "basic-010",
+          "difficulty": 4,
+          "question": "Which email header should you check to verify sender authenticity?",
+          "options": [
+            "Subject line",
+            "Reply-To address",
+            "From address",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "All email headers can be spoofed, but checking multiple headers and comparing them helps identify inconsistencies."
+        },
+        {
+          "id": "basic-011",
+          "difficulty": 4,
+          "question": "What is 'pharming'?",
+          "options": [
+            "Farming for phishing data",
+            "Redirecting users from legitimate sites to fake ones",
+            "A type of malware",
+            "Phone-based phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Pharming redirects users from legitimate websites to fraudulent ones by manipulating DNS or hosts files."
+        },
+        {
+          "id": "basic-012",
+          "difficulty": 4,
+          "question": "Which browser feature can help detect phishing sites?",
+          "options": [
+            "Incognito mode",
+            "Bookmarks",
+            "Security indicators (padlock, URL validation)",
+            "Download manager"
+          ],
+          "correct_answer": 2,
+          "explanation": "Modern browsers show security indicators like padlocks and validate URLs to help users identify secure sites."
+        },
+        {
+          "id": "basic-013",
+          "difficulty": 5,
+          "question": "What is the primary goal of most phishing attacks?",
+          "options": [
+            "To delete files",
+            "To steal sensitive information",
+            "To slow down computers",
+            "To display ads"
+          ],
+          "correct_answer": 1,
+          "explanation": "While phishing can lead to various outcomes, the primary goal is typically to steal sensitive information like credentials or financial data."
+        },
+        {
+          "id": "basic-014",
+          "difficulty": 5,
+          "question": "Which of these is NOT a common phishing delivery method?",
+          "options": [
+            "Email",
+            "SMS",
+            "Social media",
+            "Physical mail"
+          ],
+          "correct_answer": 3,
+          "explanation": "Physical mail is not typically used for phishing attacks, though it can be used for other social engineering attacks."
+        },
+        {
+          "id": "basic-015",
+          "difficulty": 5,
+          "question": "What is 'credential harvesting' in phishing?",
+          "options": [
+            "Growing digital credentials",
+            "Collecting usernames and passwords",
+            "Harvesting email addresses",
+            "Gathering personal information"
+          ],
+          "correct_answer": 1,
+          "explanation": "Credential harvesting specifically refers to collecting login credentials through phishing attacks."
+        },
+        {
+          "id": "basic-016",
+          "difficulty": 6,
+          "question": "Which phishing technique uses fake websites that look identical to real ones?",
+          "options": [
+            "Email spoofing",
+            "Website cloning",
+            "Link manipulation",
+            "Attachment phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Website cloning creates fake sites that mimic legitimate ones to trick users into entering credentials."
+        },
+        {
+          "id": "basic-017",
+          "difficulty": 6,
+          "question": "What is the 'Reply-To' header used for in phishing emails?",
+          "options": [
+            "To show the original sender",
+            "To redirect replies to attacker-controlled email",
+            "To track email opens",
+            "To encrypt the message"
+          ],
+          "correct_answer": 1,
+          "explanation": "Attackers use spoofed Reply-To headers to ensure responses go to their controlled email addresses."
+        },
+        {
+          "id": "basic-018",
+          "difficulty": 6,
+          "question": "Which of these indicates a potential man-in-the-middle attack in phishing?",
+          "options": [
+            "HTTPS certificate warnings",
+            "Slow page loading",
+            "Pop-up windows",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "All these signs can indicate MITM attacks, especially certificate warnings which suggest interception."
+        },
+        {
+          "id": "basic-019",
+          "difficulty": 7,
+          "question": "What is 'homoglyph attack' in phishing URLs?",
+          "options": [
+            "Using similar-looking characters",
+            "Hiding URLs",
+            "Shortening URLs",
+            "Encrypting URLs"
+          ],
+          "correct_answer": 0,
+          "explanation": "Homoglyph attacks use characters that look similar (like replacing 'o' with 'ο') to create deceptive URLs."
+        },
+        {
+          "id": "basic-020",
+          "difficulty": 7,
+          "question": "Which email authentication protocol helps prevent spoofing?",
+          "options": [
+            "POP3",
+            "IMAP",
+            "SPF",
+            "SMTP"
+          ],
+          "correct_answer": 2,
+          "explanation": "SPF (Sender Policy Framework) helps prevent email spoofing by verifying sender IP addresses."
+        },
+        {
+          "id": "basic-021",
+          "difficulty": 7,
+          "question": "What is 'typosquatting' in phishing?",
+          "options": [
+            "Typing errors in emails",
+            "Registering misspelled domain names",
+            "Quick website creation",
+            "Fast email sending"
+          ],
+          "correct_answer": 1,
+          "explanation": "Typosquatting involves registering domains with common typos to catch users who mistype legitimate URLs."
+        },
+        {
+          "id": "basic-022",
+          "difficulty": 8,
+          "question": "Which technique combines phishing with malware delivery?",
+          "options": [
+            "Spear phishing",
+            "Pharming",
+            "Malware phishing",
+            "Credential phishing"
+          ],
+          "correct_answer": 2,
+          "explanation": "Malware phishing uses phishing emails to deliver malicious software through attachments or links."
+        },
+        {
+          "id": "basic-023",
+          "difficulty": 8,
+          "question": "What does DKIM verify in emails?",
+          "options": [
+            "Sender IP address",
+            "Email content integrity",
+            "Recipient address",
+            "Email routing"
+          ],
+          "correct_answer": 1,
+          "explanation": "DKIM (DomainKeys Identified Mail) verifies that email content hasn't been altered in transit."
+        },
+        {
+          "id": "basic-024",
+          "difficulty": 8,
+          "question": "Which phishing method targets mobile devices specifically?",
+          "options": [
+            "Email phishing",
+            "SMiShing",
+            "Vishing",
+            "Pharming"
+          ],
+          "correct_answer": 1,
+          "explanation": "SMiShing (SMS phishing) targets mobile devices through text messages."
+        },
+        {
+          "id": "basic-025",
+          "difficulty": 8,
+          "question": "What is 'waterholing' in cyber attacks?",
+          "options": [
+            "Attacking through compromised legitimate websites",
+            "Using underwater cables",
+            "Flooding networks",
+            "Creating fake watermarks"
+          ],
+          "correct_answer": 0,
+          "explanation": "Waterholing involves compromising websites that targeted users are known to visit regularly."
+        },
+        {
+          "id": "basic-026",
+          "difficulty": 9,
+          "question": "Which protocol provides end-to-end email encryption?",
+          "options": [
+            "TLS",
+            "PGP",
+            "SPF",
+            "DKIM"
+          ],
+          "correct_answer": 1,
+          "explanation": "PGP (Pretty Good Privacy) provides end-to-end encryption for email content."
+        },
+        {
+          "id": "basic-027",
+          "difficulty": 9,
+          "question": "What is 'zero-day phishing'?",
+          "options": [
+            "Phishing on day zero",
+            "Exploiting unknown vulnerabilities in phishing",
+            "Instant phishing attacks",
+            "Phishing with no delay"
+          ],
+          "correct_answer": 1,
+          "explanation": "Zero-day phishing exploits vulnerabilities that are unknown to the software vendor."
+        },
+        {
+          "id": "basic-028",
+          "difficulty": 9,
+          "question": "Which authentication method is most resistant to phishing?",
+          "options": [
+            "Password only",
+            "SMS codes",
+            "Biometric authentication",
+            "Multi-factor authentication with hardware keys"
+          ],
+          "correct_answer": 3,
+          "explanation": "Hardware-based MFA (like YubiKey) is highly resistant to phishing as it requires physical possession."
+        },
+        {
+          "id": "basic-029",
+          "difficulty": 10,
+          "question": "What is 'adversarial phishing'?",
+          "options": [
+            "Phishing against adversaries",
+            "Using AI to create highly targeted attacks",
+            "Government phishing",
+            "Corporate espionage"
+          ],
+          "correct_answer": 1,
+          "explanation": "Adversarial phishing uses advanced techniques like AI to create highly sophisticated, personalized attacks."
+        },
+        {
+          "id": "basic-030",
+          "difficulty": 10,
+          "question": "Which technique uses machine learning to detect phishing?",
+          "options": [
+            "URL analysis",
+            "Behavioral analysis",
+            "Both A and B",
+            "Neither"
+          ],
+          "correct_answer": 2,
+          "explanation": "Modern anti-phishing systems use both URL pattern analysis and behavioral analysis with machine learning."
+        },
+        {
+          "id": "basic-031",
+          "difficulty": 1,
+          "question": "What should you do if you suspect an email is phishing?",
+          "options": [
+            "Click all links to verify",
+            "Forward it to friends",
+            "Report it to IT security",
+            "Reply asking for more information"
+          ],
+          "correct_answer": 2,
+          "explanation": "Always report suspicious emails to IT security rather than interacting with them."
+        },
+        {
+          "id": "basic-032",
+          "difficulty": 1,
+          "question": "Which of these is a legitimate email domain ending?",
+          "options": [
+            ".com",
+            ".org",
+            ".net",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "All these are legitimate TLDs, but phishing can use any domain."
+        },
+        {
+          "id": "basic-033",
+          "difficulty": 2,
+          "question": "What does 'phishing' mean?",
+          "options": [
+            "Fishing for compliments",
+            "Fishing for sensitive information",
+            "Fishing with a net",
+            "Fishing for food"
+          ],
+          "correct_answer": 1,
+          "explanation": "Phishing is like fishing - using bait (deceptive emails) to catch victims."
+        },
+        {
+          "id": "basic-034",
+          "difficulty": 2,
+          "question": "Which email attachment should you never open?",
+          "options": [
+            ".jpg images",
+            ".pdf documents",
+            ".exe files from unknown senders",
+            ".txt files"
+          ],
+          "correct_answer": 2,
+          "explanation": "Executable files can contain malware and should never be opened from unknown sources."
+        },
+        {
+          "id": "basic-035",
+          "difficulty": 3,
+          "question": "What is a 'phishing kit'?",
+          "options": [
+            "Fishing equipment",
+            "Pre-made phishing website templates",
+            "Email client software",
+            "Anti-phishing tools"
+          ],
+          "correct_answer": 1,
+          "explanation": "Phishing kits are ready-made packages containing fake websites and phishing tools."
+        },
+        {
+          "id": "basic-036",
+          "difficulty": 3,
+          "question": "Which URL looks suspicious?",
+          "options": [
+            "https://www.bank.com/login",
+            "https://bank-login.net",
+            "https://secure-bank.org",
+            "https://bank.com.secure-login.ru"
+          ],
+          "correct_answer": 3,
+          "explanation": "The last URL uses a Russian domain (.ru) which is suspicious for a bank login."
+        },
+        {
+          "id": "basic-037",
+          "difficulty": 4,
+          "question": "What is 'link shortening' used for in phishing?",
+          "options": [
+            "Making URLs shorter",
+            "Hiding malicious destinations",
+            "Saving space",
+            "Improving readability"
+          ],
+          "correct_answer": 1,
+          "explanation": "Shortened links hide the true destination, making phishing URLs look legitimate."
+        },
+        {
+          "id": "basic-038",
+          "difficulty": 4,
+          "question": "Which email subject line is suspicious?",
+          "options": [
+            "Your account has been suspended",
+            "Monthly report attached",
+            "Meeting reminder",
+            "Project update"
+          ],
+          "correct_answer": 0,
+          "explanation": "Urgent, threatening subject lines are common in phishing emails."
+        },
+        {
+          "id": "basic-039",
+          "difficulty": 5,
+          "question": "What is 'domain spoofing'?",
+          "options": [
+            "Creating fake domains",
+            "Making domains look similar",
+            "Spoofing domain registration",
+            "Domain name changing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Domain spoofing creates domains that look very similar to legitimate ones."
+        },
+        {
+          "id": "basic-040",
+          "difficulty": 5,
+          "question": "Which browser feature helps prevent phishing?",
+          "options": [
+            "Bookmarks",
+            "History",
+            "Anti-phishing filters",
+            "Downloads"
+          ],
+          "correct_answer": 2,
+          "explanation": "Modern browsers have built-in anti-phishing filters that check URLs against known malicious sites."
+        },
+        {
+          "id": "basic-041",
+          "difficulty": 6,
+          "question": "What is 'tabjacking'?",
+          "options": [
+            "Stealing browser tabs",
+            "Replacing tab content with phishing pages",
+            "Tab management",
+            "Browser shortcuts"
+          ],
+          "correct_answer": 1,
+          "explanation": "Tabjacking replaces legitimate web pages in browser tabs with phishing content."
+        },
+        {
+          "id": "basic-042",
+          "difficulty": 6,
+          "question": "Which phishing method uses fake pop-up windows?",
+          "options": [
+            "Popup phishing",
+            "Modal phishing",
+            "Window phishing",
+            "Browser phishing"
+          ],
+          "correct_answer": 0,
+          "explanation": "Popup phishing uses fake browser popups to trick users into entering credentials."
+        },
+        {
+          "id": "basic-043",
+          "difficulty": 7,
+          "question": "What is 'formjacking'?",
+          "options": [
+            "Stealing forms",
+            "Injecting malicious code into web forms",
+            "Form validation",
+            "Form submission"
+          ],
+          "correct_answer": 1,
+          "explanation": "Formjacking injects malicious code into legitimate websites to steal form data."
+        },
+        {
+          "id": "basic-044",
+          "difficulty": 7,
+          "question": "Which technique uses voice calls for phishing?",
+          "options": [
+            "Voice phishing",
+            "Call phishing",
+            "Phone phishing",
+            "Vishing"
+          ],
+          "correct_answer": 3,
+          "explanation": "Vishing (voice phishing) uses phone calls to extract sensitive information."
+        },
+        {
+          "id": "basic-045",
+          "difficulty": 8,
+          "question": "What is 'session hijacking' in phishing?",
+          "options": [
+            "Stealing user sessions",
+            "Hijacking browser sessions",
+            "Session management",
+            "Login hijacking"
+          ],
+          "correct_answer": 0,
+          "explanation": "Session hijacking steals active user sessions to gain unauthorized access."
+        },
+        {
+          "id": "basic-046",
+          "difficulty": 8,
+          "question": "Which phishing targets mobile devices?",
+          "options": [
+            "Mobile phishing",
+            "Phone phishing",
+            "SMiShing",
+            "All of the above"
+          ],
+          "correct_answer": 2,
+          "explanation": "SMiShing specifically targets mobile devices through SMS messages."
+        },
+        {
+          "id": "basic-047",
+          "difficulty": 9,
+          "question": "What is 'zero-click phishing'?",
+          "options": [
+            "No-click phishing",
+            "Instant phishing",
+            "Automatic phishing",
+            "Passive phishing"
+          ],
+          "correct_answer": 0,
+          "explanation": "Zero-click phishing exploits vulnerabilities without requiring any user interaction."
+        },
+        {
+          "id": "basic-048",
+          "difficulty": 9,
+          "question": "Which technique uses artificial intelligence?",
+          "options": [
+            "AI phishing",
+            "Smart phishing",
+            "Automated phishing",
+            "Intelligent phishing"
+          ],
+          "correct_answer": 0,
+          "explanation": "AI phishing uses artificial intelligence to create more convincing and personalized attacks."
+        },
+        {
+          "id": "basic-049",
+          "difficulty": 10,
+          "question": "What is 'quantum phishing'?",
+          "options": [
+            "Fast phishing",
+            "Quantum computing based attacks",
+            "Advanced encryption breaking",
+            "Space-based phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Quantum phishing could use quantum computers to break current encryption methods."
+        },
+        {
+          "id": "basic-050",
+          "difficulty": 10,
+          "question": "Which defense uses behavioral analysis?",
+          "options": [
+            "Pattern recognition",
+            "User behavior monitoring",
+            "Anomaly detection",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Advanced anti-phishing systems use all these behavioral analysis techniques."
+        },
+        {
+          "id": "basic-051",
+          "difficulty": 1,
+          "question": "What is the most common phishing target?",
+          "options": [
+            "Email passwords",
+            "Banking credentials",
+            "Personal information",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Phishing targets all types of sensitive information."
+        },
+        {
+          "id": "basic-052",
+          "difficulty": 2,
+          "question": "Which email greeting is suspicious?",
+          "options": [
+            "Dear John Doe",
+            "Hello valued customer",
+            "Hi there",
+            "Dear Sir/Madam"
+          ],
+          "correct_answer": 1,
+          "explanation": "Generic greetings like 'valued customer' indicate mass phishing emails."
+        },
+        {
+          "id": "basic-053",
+          "difficulty": 3,
+          "question": "What is 'clone phishing'?",
+          "options": [
+            "Copying phishing emails",
+            "Creating fake clones",
+            "Duplicating legitimate emails with malware",
+            "Email cloning"
+          ],
+          "correct_answer": 2,
+          "explanation": "Clone phishing takes legitimate emails and replaces attachments or links with malicious ones."
+        },
+        {
+          "id": "basic-054",
+          "difficulty": 4,
+          "question": "Which domain extension is suspicious?",
+          "options": [
+            ".com",
+            ".org",
+            ".info",
+            ".ru"
+          ],
+          "correct_answer": 3,
+          "explanation": "Russian domains (.ru) are often used for phishing sites."
+        },
+        {
+          "id": "basic-055",
+          "difficulty": 5,
+          "question": "What is 'phishing awareness training'?",
+          "options": [
+            "Teaching people to fish",
+            "Educating users about phishing threats",
+            "Training phishing attackers",
+            "Fishing education"
+          ],
+          "correct_answer": 1,
+          "explanation": "Phishing awareness training teaches users to recognize and avoid phishing attacks."
+        },
+        {
+          "id": "basic-056",
+          "difficulty": 6,
+          "question": "Which technique uses QR codes?",
+          "options": [
+            "QR phishing",
+            "Code phishing",
+            "Quick phishing",
+            "Response phishing"
+          ],
+          "correct_answer": 0,
+          "explanation": "QR phishing uses malicious QR codes that lead to phishing sites."
+        },
+        {
+          "id": "basic-057",
+          "difficulty": 7,
+          "question": "What is 'man-in-the-middle phishing'?",
+          "options": [
+            "Intercepted communications",
+            "Middle man attacks",
+            "MITM phishing",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "MITM phishing intercepts and modifies communications between parties."
+        },
+        {
+          "id": "basic-058",
+          "difficulty": 8,
+          "question": "Which phishing uses legitimate websites?",
+          "options": [
+            "Website phishing",
+            "Legit phishing",
+            "Compromised site phishing",
+            "Waterholing"
+          ],
+          "correct_answer": 3,
+          "explanation": "Waterholing compromises legitimate websites that targets are known to visit."
+        },
+        {
+          "id": "basic-059",
+          "difficulty": 9,
+          "question": "What is 'fileless phishing'?",
+          "options": [
+            "No file attachments",
+            "Memory-resident malware",
+            "Cloud-based phishing",
+            "Attachment-free phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Fileless phishing delivers malware that runs in memory without writing files."
+        },
+        {
+          "id": "basic-060",
+          "difficulty": 10,
+          "question": "Which defense uses AI and machine learning?",
+          "options": [
+            "Smart detection",
+            "AI anti-phishing",
+            "Automated analysis",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Modern anti-phishing uses AI and ML for all types of detection and analysis."
+        },
+        {
+          "id": "basic-061",
+          "difficulty": 1,
+          "question": "What should you check first in a suspicious email?",
+          "options": [
+            "The sender's email address",
+            "The subject line",
+            "The greeting",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Check all elements of suspicious emails for inconsistencies."
+        },
+        {
+          "id": "basic-062",
+          "difficulty": 2,
+          "question": "Which attachment type is dangerous?",
+          "options": [
+            ".docx",
+            ".xlsx",
+            ".pdf",
+            ".exe"
+          ],
+          "correct_answer": 3,
+          "explanation": "Executable files (.exe) can contain malware."
+        },
+        {
+          "id": "basic-063",
+          "difficulty": 3,
+          "question": "What is 'business email compromise'?",
+          "options": [
+            "Email business",
+            "Compromised business emails",
+            "BEC attacks",
+            "Corporate phishing"
+          ],
+          "correct_answer": 2,
+          "explanation": "BEC targets business email accounts for financial gain."
+        },
+        {
+          "id": "basic-064",
+          "difficulty": 4,
+          "question": "Which URL component is suspicious?",
+          "options": [
+            "https://",
+            "@ symbol in URL",
+            "www.",
+            "Domain name"
+          ],
+          "correct_answer": 1,
+          "explanation": "@ symbols in URLs can hide the true domain."
+        },
+        {
+          "id": "basic-065",
+          "difficulty": 5,
+          "question": "What is 'multi-factor authentication'?",
+          "options": [
+            "Multiple passwords",
+            "Two or more verification methods",
+            "Complex passwords",
+            "Biometric only"
+          ],
+          "correct_answer": 1,
+          "explanation": "MFA requires multiple forms of verification."
+        },
+        {
+          "id": "basic-066",
+          "difficulty": 6,
+          "question": "Which phishing uses social media?",
+          "options": [
+            "Social phishing",
+            "Media phishing",
+            "Angler phishing",
+            "Platform phishing"
+          ],
+          "correct_answer": 2,
+          "explanation": "Angler phishing targets social media customer service."
+        },
+        {
+          "id": "basic-067",
+          "difficulty": 7,
+          "question": "What is 'cryptojacking'?",
+          "options": [
+            "Stealing cryptocurrencies",
+            "Mining crypto on victim devices",
+            "Crypto phishing",
+            "Blockchain attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Cryptojacking uses victim devices to mine cryptocurrency."
+        },
+        {
+          "id": "basic-068",
+          "difficulty": 8,
+          "question": "Which technique uses voice assistants?",
+          "options": [
+            "Voice phishing",
+            "Assistant phishing",
+            "Vishing 2.0",
+            "Smart device phishing"
+          ],
+          "correct_answer": 0,
+          "explanation": "Voice phishing can target smart assistants and voice interfaces."
+        },
+        {
+          "id": "basic-069",
+          "difficulty": 9,
+          "question": "What is 'deepfake phishing'?",
+          "options": [
+            "Fake deep learning",
+            "AI-generated fake audio/video",
+            "Deep phishing",
+            "Fake intelligence"
+          ],
+          "correct_answer": 1,
+          "explanation": "Deepfake phishing uses AI to create realistic fake audio or video."
+        },
+        {
+          "id": "basic-070",
+          "difficulty": 10,
+          "question": "Which defense uses blockchain?",
+          "options": [
+            "Blockchain security",
+            "Decentralized verification",
+            "Crypto authentication",
+            "Distributed ledger security"
+          ],
+          "correct_answer": 1,
+          "explanation": "Blockchain can provide decentralized verification systems."
+        },
+        {
+          "id": "basic-071",
+          "difficulty": 1,
+          "question": "What is a 'phish tank'?",
+          "options": [
+            "Fish tank",
+            "Database of phishing sites",
+            "Anti-phishing tool",
+            "Phishing storage"
+          ],
+          "correct_answer": 1,
+          "explanation": "PhishTank is a database of verified phishing sites."
+        },
+        {
+          "id": "basic-072",
+          "difficulty": 2,
+          "question": "Which email looks legitimate?",
+          "options": [
+            "support@bank.com",
+            "support@bank.co",
+            "support@bank.ru",
+            "support@bank.net"
+          ],
+          "correct_answer": 0,
+          "explanation": ".com is the standard domain for most banks."
+        },
+        {
+          "id": "basic-073",
+          "difficulty": 3,
+          "question": "What is 'rainbow table attack'?",
+          "options": [
+            "Color attack",
+            "Pre-computed password hashes",
+            "Rainbow phishing",
+            "Table lookup attack"
+          ],
+          "correct_answer": 1,
+          "explanation": "Rainbow tables are pre-computed tables for cracking password hashes."
+        },
+        {
+          "id": "basic-074",
+          "difficulty": 4,
+          "question": "Which password is strongest?",
+          "options": [
+            "password123",
+            "P@ssw0rd!",
+            "MyDogName123",
+            "CorrectHorseBatteryStaple"
+          ],
+          "correct_answer": 3,
+          "explanation": "Passphrases like 'CorrectHorseBatteryStaple' are stronger than complex short passwords."
+        },
+        {
+          "id": "basic-075",
+          "difficulty": 5,
+          "question": "What is 'two-factor authentication'?",
+          "options": [
+            "Two passwords",
+            "Password + second factor",
+            "Two-step verification",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "2FA includes various combinations of authentication factors."
+        },
+        {
+          "id": "basic-076",
+          "difficulty": 6,
+          "question": "Which phishing uses search engines?",
+          "options": [
+            "SEO phishing",
+            "Search phishing",
+            "Engine phishing",
+            "Google phishing"
+          ],
+          "correct_answer": 0,
+          "explanation": "SEO phishing manipulates search results to lead to malicious sites."
+        },
+        {
+          "id": "basic-077",
+          "difficulty": 7,
+          "question": "What is 'ransomware'?",
+          "options": [
+            "Data encryption malware",
+            "Ransom demands",
+            "Crypto malware",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Ransomware encrypts data and demands payment for decryption."
+        },
+        {
+          "id": "basic-078",
+          "difficulty": 8,
+          "question": "Which technique uses IoT devices?",
+          "options": [
+            "IoT phishing",
+            "Device phishing",
+            "Smart phishing",
+            "Connected device attacks"
+          ],
+          "correct_answer": 0,
+          "explanation": "IoT phishing targets Internet of Things devices."
+        },
+        {
+          "id": "basic-079",
+          "difficulty": 9,
+          "question": "What is 'supply chain phishing'?",
+          "options": [
+            "Vendor attacks",
+            "Third-party compromise",
+            "Supply phishing",
+            "Chain attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Supply chain phishing compromises vendors to reach main targets."
+        },
+        {
+          "id": "basic-080",
+          "difficulty": 10,
+          "question": "Which defense uses zero trust?",
+          "options": [
+            "Trust no one",
+            "Verify everything",
+            "Zero trust architecture",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Zero trust assumes no implicit trust and verifies everything."
+        },
+        {
+          "id": "basic-081",
+          "difficulty": 1,
+          "question": "What is 'cyber hygiene'?",
+          "options": [
+            "Digital cleanliness",
+            "Security best practices",
+            "Online habits",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Cyber hygiene includes all security best practices and habits."
+        },
+        {
+          "id": "basic-082",
+          "difficulty": 2,
+          "question": "Which link should you hover over?",
+          "options": [
+            "Suspicious links",
+            "All links",
+            "Shortened links",
+            "Known safe links"
+          ],
+          "correct_answer": 2,
+          "explanation": "Hover over shortened links to see the true destination."
+        },
+        {
+          "id": "basic-083",
+          "difficulty": 3,
+          "question": "What is 'macro malware'?",
+          "options": [
+            "Large malware",
+            "Office document macros",
+            "Macro viruses",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Macro malware uses document macros to execute malicious code."
+        },
+        {
+          "id": "basic-084",
+          "difficulty": 4,
+          "question": "Which browser shows security warnings?",
+          "options": [
+            "All modern browsers",
+            "Chrome only",
+            "Firefox only",
+            "Safari only"
+          ],
+          "correct_answer": 0,
+          "explanation": "All modern browsers show security warnings for suspicious sites."
+        },
+        {
+          "id": "basic-085",
+          "difficulty": 5,
+          "question": "What is 'password spraying'?",
+          "options": [
+            "Password guessing",
+            "Trying common passwords on many accounts",
+            "Password attacks",
+            "Spray phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Password spraying tries common passwords across many accounts."
+        },
+        {
+          "id": "basic-086",
+          "difficulty": 6,
+          "question": "Which phishing uses calendars?",
+          "options": [
+            "Calendar phishing",
+            "Event phishing",
+            "Schedule phishing",
+            "Time phishing"
+          ],
+          "correct_answer": 0,
+          "explanation": "Calendar phishing uses fake calendar invites with malicious links."
+        },
+        {
+          "id": "basic-087",
+          "difficulty": 7,
+          "question": "What is 'DDoS phishing'?",
+          "options": [
+            "Distributed attacks",
+            "Phishing during DDoS",
+            "DDoS as distraction",
+            "Network phishing"
+          ],
+          "correct_answer": 2,
+          "explanation": "DDoS can be used as a distraction for phishing attacks."
+        },
+        {
+          "id": "basic-088",
+          "difficulty": 8,
+          "question": "Which technique uses AR/VR?",
+          "options": [
+            "AR phishing",
+            "VR phishing",
+            "Immersive phishing",
+            "Virtual reality attacks"
+          ],
+          "correct_answer": 0,
+          "explanation": "AR phishing could use augmented reality for attacks."
+        },
+        {
+          "id": "basic-089",
+          "difficulty": 9,
+          "question": "What is 'AI-driven phishing'?",
+          "options": [
+            "AI creates phishing",
+            "Automated attacks",
+            "Smart phishing",
+            "Intelligent attacks"
+          ],
+          "correct_answer": 0,
+          "explanation": "AI can generate personalized and convincing phishing content."
+        },
+        {
+          "id": "basic-090",
+          "difficulty": 10,
+          "question": "Which defense uses quantum encryption?",
+          "options": [
+            "Quantum security",
+            "Post-quantum crypto",
+            "Quantum-resistant algorithms",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Quantum encryption uses quantum-resistant cryptographic algorithms."
+        },
+        {
+          "id": "basic-091",
+          "difficulty": 1,
+          "question": "What is 'digital footprint'?",
+          "options": [
+            "Online tracks",
+            "Data trail",
+            "Internet history",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Digital footprint is all the data you leave online."
+        },
+        {
+          "id": "basic-092",
+          "difficulty": 2,
+          "question": "Which email should you delete immediately?",
+          "options": [
+            "Bank alerts",
+            "Prize notifications",
+            "Account warnings",
+            "All suspicious emails"
+          ],
+          "correct_answer": 3,
+          "explanation": "Delete all suspicious emails without opening attachments or clicking links."
+        },
+        {
+          "id": "basic-093",
+          "difficulty": 3,
+          "question": "What is 'social proof' in phishing?",
+          "options": [
+            "Social verification",
+            "Peer pressure tactics",
+            "Social validation",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Social proof uses peer pressure and validation in phishing."
+        },
+        {
+          "id": "basic-094",
+          "difficulty": 4,
+          "question": "Which URL is secure?",
+          "options": [
+            "http://site.com",
+            "https://site.com",
+            "ftp://site.com",
+            "file://site.com"
+          ],
+          "correct_answer": 1,
+          "explanation": "HTTPS provides encrypted, secure connections."
+        },
+        {
+          "id": "basic-095",
+          "difficulty": 5,
+          "question": "What is 'phishing simulation'?",
+          "options": [
+            "Fake phishing tests",
+            "Training exercises",
+            "Simulated attacks",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Phishing simulations are controlled fake attacks for training."
+        },
+        {
+          "id": "basic-096",
+          "difficulty": 6,
+          "question": "Which phishing uses podcasts?",
+          "options": [
+            "Audio phishing",
+            "Podcast phishing",
+            "Voice phishing",
+            "Media phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Podcast phishing could embed malicious links in show notes."
+        },
+        {
+          "id": "basic-097",
+          "difficulty": 7,
+          "question": "What is 'malware-as-a-service'?",
+          "options": [
+            "Rented malware",
+            "Malware subscription",
+            "Service-based attacks",
+            "Cloud malware"
+          ],
+          "correct_answer": 0,
+          "explanation": "MaaS allows attackers to rent malware tools and services."
+        },
+        {
+          "id": "basic-098",
+          "difficulty": 8,
+          "question": "Which technique uses 5G?",
+          "options": [
+            "5G phishing",
+            "Fast phishing",
+            "Network phishing",
+            "Mobile attacks"
+          ],
+          "correct_answer": 0,
+          "explanation": "5G could enable faster, more sophisticated mobile phishing."
+        },
+        {
+          "id": "basic-099",
+          "difficulty": 9,
+          "question": "What is 'context-aware phishing'?",
+          "options": [
+            "Situation-aware attacks",
+            "Smart phishing",
+            "Adaptive attacks",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Context-aware phishing adapts based on victim context and behavior."
+        },
+        {
+          "id": "basic-100",
+          "difficulty": 10,
+          "question": "Which defense uses swarm intelligence?",
+          "options": [
+            "Collective defense",
+            "Swarm security",
+            "Distributed AI",
+            "Group intelligence"
+          ],
+          "correct_answer": 0,
+          "explanation": "Swarm intelligence uses collective behavior patterns for defense."
+        }
+      ]
+    },
+    {
+      "id": "advanced-phishing",
+      "name": "Advanced Phishing Techniques",
+      "description": "Sophisticated phishing methods and evasion techniques",
+      "questions": [
+        {
+          "id": "advanced-001",
+          "difficulty": 1,
+          "question": "What is 'whaling' in phishing terminology?",
+          "options": [
+            "Large-scale phishing",
+            "Targeting high-profile executives",
+            "Using whale-themed emails",
+            "Ocean-based attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Whaling targets high-value individuals like CEOs and executives with personalized attacks."
+        },
+        {
+          "id": "advanced-002",
+          "difficulty": 1,
+          "question": "Which technique involves compromising legitimate email threads?",
+          "options": [
+            "Thread hijacking",
+            "Email spoofing",
+            "Reply chain phishing",
+            "Conversation phishing"
+          ],
+          "correct_answer": 0,
+          "explanation": "Thread hijacking involves inserting malicious content into existing legitimate email conversations."
+        },
+        {
+          "id": "advanced-003",
+          "difficulty": 2,
+          "question": "What is 'evil twin' in Wi-Fi phishing?",
+          "options": [
+            "A malicious Wi-Fi access point",
+            "Duplicate phishing emails",
+            "Fake websites",
+            "Malicious twins"
+          ],
+          "correct_answer": 0,
+          "explanation": "Evil twin attacks create fake Wi-Fi hotspots that mimic legitimate ones to intercept data."
+        },
+        {
+          "id": "advanced-004",
+          "difficulty": 2,
+          "question": "Which phishing method uses phone calls?",
+          "options": [
+            "Email phishing",
+            "SMiShing",
+            "Vishing",
+            "Pharming"
+          ],
+          "correct_answer": 2,
+          "explanation": "Vishing (voice phishing) uses phone calls to extract sensitive information."
+        },
+        {
+          "id": "advanced-005",
+          "difficulty": 3,
+          "question": "What is 'catfishing' in social engineering?",
+          "options": [
+            "Fishing for cats",
+            "Creating fake online personas",
+            "Network attacks",
+            "Password cracking"
+          ],
+          "correct_answer": 1,
+          "explanation": "Catfishing involves creating fake identities on social media to build trust and extract information."
+        },
+        {
+          "id": "advanced-006",
+          "difficulty": 3,
+          "question": "Which attack combines phishing with search engine manipulation?",
+          "options": [
+            "SEO phishing",
+            "Search poisoning",
+            "Both A and B",
+            "Neither"
+          ],
+          "correct_answer": 2,
+          "explanation": "Both SEO phishing and search poisoning manipulate search results to direct users to malicious sites."
+        },
+        {
+          "id": "advanced-007",
+          "difficulty": 4,
+          "question": "What is 'angler phishing'?",
+          "options": [
+            "Fishing with angles",
+            "Phishing on social media platforms",
+            "Geometric phishing",
+            "Angular attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Angler phishing targets social media users by posing as customer service representatives."
+        },
+        {
+          "id": "advanced-008",
+          "difficulty": 4,
+          "question": "Which technique uses compromised email accounts to send phishing?",
+          "options": [
+            "Account takeover",
+            "Email spoofing",
+            "Business email compromise",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "All these techniques can involve compromised accounts, but account takeover specifically refers to hijacking existing accounts."
+        },
+        {
+          "id": "advanced-009",
+          "difficulty": 5,
+          "question": "What is 'snowshoeing' in spam/phishing?",
+          "options": [
+            "Winter phishing",
+            "Spreading attacks across many IP addresses",
+            "Fast email delivery",
+            "Encrypted phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Snowshoeing distributes phishing emails across many IP addresses to avoid spam filters."
+        },
+        {
+          "id": "advanced-010",
+          "difficulty": 5,
+          "question": "Which phishing method targets supply chain vulnerabilities?",
+          "options": [
+            "Chain phishing",
+            "Supply chain attacks",
+            "Vendor phishing",
+            "Third-party phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Supply chain phishing attacks target vendors or third parties to gain access to the main target."
+        },
+        {
+          "id": "advanced-011",
+          "difficulty": 6,
+          "question": "What is 'phishing kit'?",
+          "options": [
+            "Fishing equipment",
+            "Pre-packaged phishing tools",
+            "Email templates",
+            "Phishing software"
+          ],
+          "correct_answer": 1,
+          "explanation": "Phishing kits are ready-made packages containing phishing pages, scripts, and tools for attackers."
+        },
+        {
+          "id": "advanced-012",
+          "difficulty": 6,
+          "question": "Which technique involves creating fake SSL certificates?",
+          "options": [
+            "Certificate spoofing",
+            "SSL phishing",
+            "HTTPS phishing",
+            "Certificate phishing"
+          ],
+          "correct_answer": 0,
+          "explanation": "Certificate spoofing creates fake SSL certificates to make phishing sites appear legitimate."
+        },
+        {
+          "id": "advanced-013",
+          "difficulty": 7,
+          "question": "What is 'tabnabbing'?",
+          "options": [
+            "Stealing browser tabs",
+            "Replacing browser tabs with phishing pages",
+            "Tab management",
+            "Browser hijacking"
+          ],
+          "correct_answer": 1,
+          "explanation": "Tabnabbing replaces inactive browser tabs with phishing pages that mimic legitimate sites."
+        },
+        {
+          "id": "advanced-014",
+          "difficulty": 7,
+          "question": "Which attack uses JavaScript to manipulate browser behavior?",
+          "options": [
+            "Script phishing",
+            "JavaScript injection",
+            "Browser manipulation",
+            "DOM-based attacks"
+          ],
+          "correct_answer": 3,
+          "explanation": "DOM-based attacks use JavaScript to manipulate the Document Object Model for phishing."
+        },
+        {
+          "id": "advanced-015",
+          "difficulty": 8,
+          "question": "What is 'living off the land' in phishing?",
+          "options": [
+            "Using legitimate system tools",
+            "Rural phishing",
+            "Living document attacks",
+            "Environmental phishing"
+          ],
+          "correct_answer": 0,
+          "explanation": "Living off the land uses legitimate system tools and processes to conduct attacks."
+        },
+        {
+          "id": "advanced-016",
+          "difficulty": 8,
+          "question": "Which technique involves manipulating DNS responses?",
+          "options": [
+            "DNS spoofing",
+            "DNS phishing",
+            "Domain hijacking",
+            "DNS poisoning"
+          ],
+          "correct_answer": 3,
+          "explanation": "DNS poisoning manipulates DNS responses to redirect users to malicious sites."
+        },
+        {
+          "id": "advanced-017",
+          "difficulty": 9,
+          "question": "What is 'fileless phishing'?",
+          "options": [
+            "Phishing without files",
+            "Memory-based malware delivery",
+            "Cloud-based phishing",
+            "Fileless attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Fileless phishing delivers malware through memory without writing files to disk."
+        },
+        {
+          "id": "advanced-018",
+          "difficulty": 9,
+          "question": "Which attack targets OAuth tokens?",
+          "options": [
+            "Token phishing",
+            "OAuth hijacking",
+            "Authorization phishing",
+            "API phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "OAuth hijacking steals OAuth tokens to gain unauthorized access to accounts."
+        },
+        {
+          "id": "advanced-019",
+          "difficulty": 10,
+          "question": "What is 'AI-powered phishing'?",
+          "options": [
+            "Phishing with AI assistance",
+            "Using AI to generate personalized attacks",
+            "AI detecting phishing",
+            "Automated phishing tools"
+          ],
+          "correct_answer": 1,
+          "explanation": "AI-powered phishing uses artificial intelligence to create highly convincing, personalized attacks."
+        },
+        {
+          "id": "advanced-020",
+          "difficulty": 10,
+          "question": "Which technique uses quantum computing for phishing?",
+          "options": [
+            "Quantum phishing",
+            "Cryptographic attacks",
+            "Quantum encryption breaking",
+            "Advanced phishing"
+          ],
+          "correct_answer": 2,
+          "explanation": "Quantum computing could potentially break current encryption, enabling advanced phishing attacks."
+        },
+        {
+          "id": "advanced-021",
+          "difficulty": 1,
+          "question": "What is 'spear phishing'?",
+          "options": [
+            "Mass email phishing",
+            "Targeted phishing attacks",
+            "Spear fishing",
+            "Advanced email phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Spear phishing is highly targeted phishing using personal information about the victim."
+        },
+        {
+          "id": "advanced-022",
+          "difficulty": 1,
+          "question": "Which attack targets high-level executives?",
+          "options": [
+            "CEO fraud",
+            "Executive phishing",
+            "Whaling",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Whaling specifically targets high-level executives and CEOs."
+        },
+        {
+          "id": "advanced-023",
+          "difficulty": 2,
+          "question": "What is 'business email compromise'?",
+          "options": [
+            "Email business takeover",
+            "Compromised business accounts",
+            "BEC attacks",
+            "Corporate account takeover"
+          ],
+          "correct_answer": 2,
+          "explanation": "BEC involves compromising business email accounts for financial fraud."
+        },
+        {
+          "id": "advanced-024",
+          "difficulty": 2,
+          "question": "Which technique uses fake Wi-Fi networks?",
+          "options": [
+            "Wi-Fi phishing",
+            "Evil twin attacks",
+            "Hotspot spoofing",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Evil twin attacks create fake Wi-Fi hotspots to intercept data."
+        },
+        {
+          "id": "advanced-025",
+          "difficulty": 3,
+          "question": "What is 'catfishing'?",
+          "options": [
+            "Fishing with cats",
+            "Creating fake online personas",
+            "Social media deception",
+            "Profile spoofing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Catfishing involves creating fake identities to build trust and extract information."
+        },
+        {
+          "id": "advanced-026",
+          "difficulty": 3,
+          "question": "Which attack uses search engine optimization?",
+          "options": [
+            "SEO poisoning",
+            "Search phishing",
+            "Engine manipulation",
+            "Organic phishing"
+          ],
+          "correct_answer": 0,
+          "explanation": "SEO poisoning manipulates search results to direct users to malicious sites."
+        },
+        {
+          "id": "advanced-027",
+          "difficulty": 4,
+          "question": "What is 'angler phishing'?",
+          "options": [
+            "Fishing with angles",
+            "Social media customer service scams",
+            "Angled attacks",
+            "Geometric phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Angler phishing poses as customer service on social media platforms."
+        },
+        {
+          "id": "advanced-028",
+          "difficulty": 4,
+          "question": "Which technique hijacks existing accounts?",
+          "options": [
+            "Account takeover",
+            "Session hijacking",
+            "Identity theft",
+            "Credential stuffing"
+          ],
+          "correct_answer": 0,
+          "explanation": "Account takeover involves hijacking existing user accounts."
+        },
+        {
+          "id": "advanced-029",
+          "difficulty": 5,
+          "question": "What is 'snowshoe spamming'?",
+          "options": [
+            "Winter email attacks",
+            "Distributed email campaigns",
+            "IP address spreading",
+            "Cold email phishing"
+          ],
+          "correct_answer": 2,
+          "explanation": "Snowshoe spamming distributes attacks across many IP addresses to avoid detection."
+        },
+        {
+          "id": "advanced-030",
+          "difficulty": 5,
+          "question": "Which attack targets third parties?",
+          "options": [
+            "Third-party phishing",
+            "Supply chain attacks",
+            "Vendor compromise",
+            "Partner phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Supply chain attacks compromise vendors to reach the main target."
+        },
+        {
+          "id": "advanced-031",
+          "difficulty": 6,
+          "question": "What is a 'phishing kit' used for?",
+          "options": [
+            "Fishing equipment",
+            "Ready-made phishing tools",
+            "Email templates",
+            "Anti-phishing software"
+          ],
+          "correct_answer": 1,
+          "explanation": "Phishing kits are packaged tools containing fake websites, scripts, and phishing infrastructure."
+        },
+        {
+          "id": "advanced-032",
+          "difficulty": 6,
+          "question": "Which technique creates fake SSL certificates?",
+          "options": [
+            "Certificate forgery",
+            "SSL spoofing",
+            "HTTPS phishing",
+            "Certificate phishing"
+          ],
+          "correct_answer": 0,
+          "explanation": "Certificate forgery creates fake SSL certificates to make phishing sites appear legitimate."
+        },
+        {
+          "id": "advanced-033",
+          "difficulty": 7,
+          "question": "What is 'tabnabbing'?",
+          "options": [
+            "Stealing browser tabs",
+            "Replacing inactive tabs with phishing pages",
+            "Tab hijacking",
+            "Browser manipulation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Tabnabbing replaces inactive browser tabs with phishing content."
+        },
+        {
+          "id": "advanced-034",
+          "difficulty": 7,
+          "question": "Which attack uses JavaScript manipulation?",
+          "options": [
+            "Script injection",
+            "DOM-based attacks",
+            "JavaScript phishing",
+            "Client-side attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "DOM-based attacks manipulate the Document Object Model using JavaScript."
+        },
+        {
+          "id": "advanced-035",
+          "difficulty": 8,
+          "question": "What is 'living off the land'?",
+          "options": [
+            "Rural attacks",
+            "Using legitimate system tools",
+            "Native tool exploitation",
+            "System tool phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Living off the land uses legitimate system tools to conduct attacks."
+        },
+        {
+          "id": "advanced-036",
+          "difficulty": 8,
+          "question": "Which technique manipulates DNS responses?",
+          "options": [
+            "DNS spoofing",
+            "DNS poisoning",
+            "Domain redirection",
+            "Name server attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "DNS poisoning manipulates DNS responses to redirect to malicious sites."
+        },
+        {
+          "id": "advanced-037",
+          "difficulty": 9,
+          "question": "What is 'fileless malware delivery'?",
+          "options": [
+            "No file attachments",
+            "Memory-based malware",
+            "Cloud-delivered attacks",
+            "Fileless phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Fileless malware runs in memory without writing files to disk."
+        },
+        {
+          "id": "advanced-038",
+          "difficulty": 9,
+          "question": "Which attack targets OAuth tokens?",
+          "options": [
+            "Token theft",
+            "OAuth hijacking",
+            "Authorization phishing",
+            "API token attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "OAuth hijacking steals OAuth access tokens for unauthorized access."
+        },
+        {
+          "id": "advanced-039",
+          "difficulty": 10,
+          "question": "What is 'adversarial AI phishing'?",
+          "options": [
+            "AI vs AI attacks",
+            "AI-generated personalized attacks",
+            "Adversarial machine learning",
+            "AI defense evasion"
+          ],
+          "correct_answer": 1,
+          "explanation": "Adversarial AI phishing uses artificial intelligence to create highly convincing personalized attacks."
+        },
+        {
+          "id": "advanced-040",
+          "difficulty": 10,
+          "question": "Which technique uses quantum-safe encryption breaking?",
+          "options": [
+            "Quantum attacks",
+            "Post-quantum phishing",
+            "Cryptographic breaking",
+            "Advanced encryption attacks"
+          ],
+          "correct_answer": 0,
+          "explanation": "Quantum computing could break current encryption, enabling advanced phishing."
+        },
+        {
+          "id": "advanced-041",
+          "difficulty": 1,
+          "question": "What is 'clone phishing'?",
+          "options": [
+            "Email cloning",
+            "Duplicating legitimate emails",
+            "Copy phishing",
+            "Template attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Clone phishing duplicates legitimate emails and replaces links/attachments with malicious ones."
+        },
+        {
+          "id": "advanced-042",
+          "difficulty": 2,
+          "question": "Which attack uses compromised email threads?",
+          "options": [
+            "Thread hijacking",
+            "Conversation phishing",
+            "Email chain attacks",
+            "Reply attacks"
+          ],
+          "correct_answer": 0,
+          "explanation": "Thread hijacking inserts malicious content into existing legitimate email conversations."
+        },
+        {
+          "id": "advanced-043",
+          "difficulty": 3,
+          "question": "What is 'pretexting'?",
+          "options": [
+            "Creating pretexts",
+            "Fabricating scenarios for information gathering",
+            "Story creation",
+            "Scenario phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Pretexting creates false scenarios to obtain sensitive information."
+        },
+        {
+          "id": "advanced-044",
+          "difficulty": 4,
+          "question": "Which technique involves account compromise?",
+          "options": [
+            "Account takeover",
+            "Credential theft",
+            "Identity compromise",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Account takeover involves hijacking existing accounts for malicious purposes."
+        },
+        {
+          "id": "advanced-045",
+          "difficulty": 5,
+          "question": "What is 'watering hole attacks'?",
+          "options": [
+            "Water-based attacks",
+            "Compromising frequented websites",
+            "Site infection",
+            "Popular site attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Watering hole attacks compromise websites that targets are known to visit."
+        },
+        {
+          "id": "advanced-046",
+          "difficulty": 6,
+          "question": "Which attack uses zero-day vulnerabilities?",
+          "options": [
+            "Zero-day phishing",
+            "Unknown vulnerability exploitation",
+            "Unpatched attacks",
+            "New vulnerability attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Zero-day attacks exploit vulnerabilities unknown to the software vendor."
+        },
+        {
+          "id": "advanced-047",
+          "difficulty": 7,
+          "question": "What is 'man-in-the-browser'?",
+          "options": [
+            "Browser hijacking",
+            "Malicious browser extensions",
+            "In-browser malware",
+            "Client-side attacks"
+          ],
+          "correct_answer": 0,
+          "explanation": "Man-in-the-browser attacks intercept and modify browser communications."
+        },
+        {
+          "id": "advanced-048",
+          "difficulty": 8,
+          "question": "Which technique uses command and control servers?",
+          "options": [
+            "C2 servers",
+            "Botnet control",
+            "Remote access",
+            "Server-based attacks"
+          ],
+          "correct_answer": 0,
+          "explanation": "C2 servers allow attackers to remotely control compromised systems."
+        },
+        {
+          "id": "advanced-049",
+          "difficulty": 9,
+          "question": "What is 'polymorphic malware'?",
+          "options": [
+            "Shape-shifting malware",
+            "Code that changes appearance",
+            "Adaptive malware",
+            "Evolving viruses"
+          ],
+          "correct_answer": 1,
+          "explanation": "Polymorphic malware changes its code to avoid detection by signature-based antivirus."
+        },
+        {
+          "id": "advanced-050",
+          "difficulty": 10,
+          "question": "Which attack uses artificial neural networks?",
+          "options": [
+            "Neural phishing",
+            "AI-generated attacks",
+            "Machine learning phishing",
+            "Deep learning attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "AI-generated attacks use neural networks to create sophisticated phishing content."
+        },
+        {
+          "id": "advanced-051",
+          "difficulty": 1,
+          "question": "What is 'smishing'?",
+          "options": [
+            "Smart messaging",
+            "SMS phishing",
+            "Mobile text attacks",
+            "Phone phishing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Smishing is phishing conducted via SMS/text messages."
+        },
+        {
+          "id": "advanced-052",
+          "difficulty": 2,
+          "question": "Which attack uses voice communication?",
+          "options": [
+            "Voice phishing",
+            "Vishing",
+            "Phone scams",
+            "Call attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Vishing is voice phishing using phone calls to extract information."
+        },
+        {
+          "id": "advanced-053",
+          "difficulty": 3,
+          "question": "What is 'pharming'?",
+          "options": [
+            "Farm-based attacks",
+            "DNS poisoning",
+            "Domain redirection",
+            "Host file manipulation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Pharming redirects users from legitimate sites to fake ones via DNS manipulation."
+        },
+        {
+          "id": "advanced-054",
+          "difficulty": 4,
+          "question": "Which technique involves dumpster diving?",
+          "options": [
+            "Trash searching",
+            "Physical information gathering",
+            "Document recovery",
+            "Waste analysis"
+          ],
+          "correct_answer": 1,
+          "explanation": "Dumpster diving involves searching discarded materials for sensitive information."
+        },
+        {
+          "id": "advanced-055",
+          "difficulty": 5,
+          "question": "What is 'shoulder surfing'?",
+          "options": [
+            "Beach attacks",
+            "Observing over shoulder",
+            "Visual eavesdropping",
+            "Screen watching"
+          ],
+          "correct_answer": 2,
+          "explanation": "Shoulder surfing involves watching someone enter sensitive information."
+        },
+        {
+          "id": "advanced-056",
+          "difficulty": 6,
+          "question": "Which attack uses USB devices?",
+          "options": [
+            "USB phishing",
+            "Device attacks",
+            "Hardware phishing",
+            "Physical media attacks"
+          ],
+          "correct_answer": 0,
+          "explanation": "USB phishing uses infected USB drives to deliver malware."
+        },
+        {
+          "id": "advanced-057",
+          "difficulty": 7,
+          "question": "What is 'rootkit' malware?",
+          "options": [
+            "Root access malware",
+            "System-level hiding malware",
+            "Administrative privilege malware",
+            "Kernel malware"
+          ],
+          "correct_answer": 1,
+          "explanation": "Rootkits hide malicious activity at the system level."
+        },
+        {
+          "id": "advanced-058",
+          "difficulty": 8,
+          "question": "Which technique uses steganography?",
+          "options": [
+            "Hidden messages",
+            "Data concealment in images",
+            "Invisible ink",
+            "Secret writing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Steganography hides data within innocent-looking files like images."
+        },
+        {
+          "id": "advanced-059",
+          "difficulty": 9,
+          "question": "What is 'ransomware'?",
+          "options": [
+            "Data kidnapping",
+            "Encryption malware",
+            "Ransom demands",
+            "Crypto extortion"
+          ],
+          "correct_answer": 1,
+          "explanation": "Ransomware encrypts victim data and demands payment for decryption."
+        },
+        {
+          "id": "advanced-060",
+          "difficulty": 10,
+          "question": "Which attack uses machine learning evasion?",
+          "options": [
+            "AI evasion",
+            "Adversarial attacks",
+            "ML poisoning",
+            "Defense evasion"
+          ],
+          "correct_answer": 1,
+          "explanation": "Adversarial attacks are designed to fool machine learning detection systems."
+        },
+        {
+          "id": "advanced-061",
+          "difficulty": 1,
+          "question": "What is 'tailgating'?",
+          "options": [
+            "Following closely",
+            "Unauthorized access following",
+            "Physical security bypass",
+            "Door following"
+          ],
+          "correct_answer": 1,
+          "explanation": "Tailgating involves following authorized personnel through secured areas."
+        },
+        {
+          "id": "advanced-062",
+          "difficulty": 2,
+          "question": "Which technique uses fake badges?",
+          "options": [
+            "Badge phishing",
+            "ID spoofing",
+            "Impersonation",
+            "Physical access attacks"
+          ],
+          "correct_answer": 2,
+          "explanation": "Impersonation uses fake credentials or uniforms to gain physical access."
+        },
+        {
+          "id": "advanced-063",
+          "difficulty": 3,
+          "question": "What is 'social proof' manipulation?",
+          "options": [
+            "Social validation",
+            "Peer pressure tactics",
+            "Group influence",
+            "Authority leverage"
+          ],
+          "correct_answer": 1,
+          "explanation": "Social proof manipulation uses peer pressure to influence behavior."
+        },
+        {
+          "id": "advanced-064",
+          "difficulty": 4,
+          "question": "Which attack uses baiting?",
+          "options": [
+            "Lure attacks",
+            "Temptation-based attacks",
+            "Curiosity exploitation",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Baiting uses tempting offers or items to lure victims."
+        },
+        {
+          "id": "advanced-065",
+          "difficulty": 5,
+          "question": "What is 'quid pro quo'?",
+          "options": [
+            "Equal exchange",
+            "Trading favors for information",
+            "Service for data",
+            "Deal making"
+          ],
+          "correct_answer": 1,
+          "explanation": "Quid pro quo offers services in exchange for sensitive information."
+        },
+        {
+          "id": "advanced-066",
+          "difficulty": 6,
+          "question": "Which technique uses authority figures?",
+          "options": [
+            "Authority exploitation",
+            "Boss impersonation",
+            "Power dynamics",
+            "Hierarchical attacks"
+          ],
+          "correct_answer": 0,
+          "explanation": "Authority exploitation uses impersonation of authority figures."
+        },
+        {
+          "id": "advanced-067",
+          "difficulty": 7,
+          "question": "What is 'reverse social engineering'?",
+          "options": [
+            "Engineering backwards",
+            "Victim contacts attacker",
+            "Helpful expert positioning",
+            "Reverse psychology"
+          ],
+          "correct_answer": 2,
+          "explanation": "Reverse social engineering positions the attacker as a helpful expert."
+        },
+        {
+          "id": "advanced-068",
+          "difficulty": 8,
+          "question": "Which attack uses micro-expressions?",
+          "options": [
+            "Expression reading",
+            "Emotional manipulation",
+            "Lie detection evasion",
+            "Facial analysis"
+          ],
+          "correct_answer": 1,
+          "explanation": "Micro-expressions can be used to detect lies or genuine emotions."
+        },
+        {
+          "id": "advanced-069",
+          "difficulty": 9,
+          "question": "What is 'neuro-linguistic programming' in attacks?",
+          "options": [
+            "Brain programming",
+            "Language pattern manipulation",
+            "Psychological techniques",
+            "Mind control"
+          ],
+          "correct_answer": 1,
+          "explanation": "NLP uses language patterns for psychological manipulation."
+        },
+        {
+          "id": "advanced-070",
+          "difficulty": 10,
+          "question": "Which technique uses hypnosis?",
+          "options": [
+            "Hypnotic suggestion",
+            "Mind control",
+            "Trance induction",
+            "Suggestion techniques"
+          ],
+          "correct_answer": 0,
+          "explanation": "Hypnotic suggestion can be used in advanced social engineering."
+        },
+        {
+          "id": "advanced-071",
+          "difficulty": 1,
+          "question": "What is 'piggybacking'?",
+          "options": [
+            "Carrying someone",
+            "Convincing access for both",
+            "Shared access",
+            "Dual entry"
+          ],
+          "correct_answer": 1,
+          "explanation": "Piggybacking convinces authorized personnel to allow unauthorized access."
+        },
+        {
+          "id": "advanced-072",
+          "difficulty": 2,
+          "question": "Which technique uses flattery?",
+          "options": [
+            "Compliment attacks",
+            "Ingratiation",
+            "Praise manipulation",
+            "Ego stroking"
+          ],
+          "correct_answer": 1,
+          "explanation": "Ingratiation uses compliments and flattery to build trust."
+        },
+        {
+          "id": "advanced-073",
+          "difficulty": 3,
+          "question": "What is 'commitment and consistency'?",
+          "options": [
+            "Promise keeping",
+            "Behavioral consistency exploitation",
+            "Habit formation",
+            "Pattern exploitation"
+          ],
+          "correct_answer": 1,
+          "explanation": "This principle exploits the desire to appear consistent in behavior."
+        },
+        {
+          "id": "advanced-074",
+          "difficulty": 4,
+          "question": "Which attack uses scarcity?",
+          "options": [
+            "Limited time offers",
+            "Urgency creation",
+            "Scarcity principle",
+            "Time pressure"
+          ],
+          "correct_answer": 2,
+          "explanation": "Scarcity creates urgency to force quick decisions without thinking."
+        },
+        {
+          "id": "advanced-075",
+          "difficulty": 5,
+          "question": "What is 'liking' in social engineering?",
+          "options": [
+            "Friendship building",
+            "Rapport creation",
+            "Similarity exploitation",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Liking builds trust through similarity and rapport."
+        },
+        {
+          "id": "advanced-076",
+          "difficulty": 6,
+          "question": "Which technique uses reciprocity?",
+          "options": [
+            "Gift giving",
+            "Favor exchange",
+            "Obligation creation",
+            "Debt creation"
+          ],
+          "correct_answer": 2,
+          "explanation": "Reciprocity creates a sense of obligation to return favors."
+        },
+        {
+          "id": "advanced-077",
+          "difficulty": 7,
+          "question": "What is 'framing' in persuasion?",
+          "options": [
+            "Picture framing",
+            "Context manipulation",
+            "Perspective shaping",
+            "Message framing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Framing manipulates how information is presented and perceived."
+        },
+        {
+          "id": "advanced-078",
+          "difficulty": 8,
+          "question": "Which attack uses cognitive biases?",
+          "options": [
+            "Bias exploitation",
+            "Mental shortcuts",
+            "Thinking errors",
+            "Psychological weaknesses"
+          ],
+          "correct_answer": 0,
+          "explanation": "Cognitive biases are mental shortcuts that can be exploited."
+        },
+        {
+          "id": "advanced-079",
+          "difficulty": 9,
+          "question": "What is 'anchoring' in persuasion?",
+          "options": [
+            "Initial reference point",
+            "First impression setting",
+            "Baseline establishment",
+            "Starting point bias"
+          ],
+          "correct_answer": 0,
+          "explanation": "Anchoring establishes a reference point that influences subsequent judgments."
+        },
+        {
+          "id": "advanced-080",
+          "difficulty": 10,
+          "question": "Which technique uses subliminal messaging?",
+          "options": [
+            "Hidden messages",
+            "Subconscious influence",
+            "Below-threshold stimuli",
+            "Unconscious persuasion"
+          ],
+          "correct_answer": 3,
+          "explanation": "Subliminal messaging influences behavior below conscious awareness."
+        },
+        {
+          "id": "advanced-081",
+          "difficulty": 1,
+          "question": "What is 'eavesdropping'?",
+          "options": [
+            "Listening in",
+            "Overhearing conversations",
+            "Information gathering",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Eavesdropping involves secretly listening to conversations."
+        },
+        {
+          "id": "advanced-082",
+          "difficulty": 2,
+          "question": "Which technique uses observation?",
+          "options": [
+            "People watching",
+            "Behavioral analysis",
+            "Pattern recognition",
+            "Information gathering"
+          ],
+          "correct_answer": 1,
+          "explanation": "Behavioral analysis observes patterns to gather information."
+        },
+        {
+          "id": "advanced-083",
+          "difficulty": 3,
+          "question": "What is 'pretexting' advanced version?",
+          "options": [
+            "Complex scenarios",
+            "Multi-step stories",
+            "Detailed cover stories",
+            "Elaborate deception"
+          ],
+          "correct_answer": 2,
+          "explanation": "Advanced pretexting creates detailed, believable cover stories."
+        },
+        {
+          "id": "advanced-084",
+          "difficulty": 4,
+          "question": "Which attack uses multiple channels?",
+          "options": [
+            "Multi-channel attacks",
+            "Omni-channel phishing",
+            "Cross-platform attacks",
+            "Channel hopping"
+          ],
+          "correct_answer": 0,
+          "explanation": "Multi-channel attacks use various communication methods."
+        },
+        {
+          "id": "advanced-085",
+          "difficulty": 5,
+          "question": "What is 'layered social engineering'?",
+          "options": [
+            "Multi-layer attacks",
+            "Stacked deception",
+            "Complex manipulation",
+            "Hierarchical attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Layered attacks combine multiple social engineering techniques."
+        },
+        {
+          "id": "advanced-086",
+          "difficulty": 6,
+          "question": "Which technique uses timing?",
+          "options": [
+            "Time-based attacks",
+            "Opportunity exploitation",
+            "Moment selection",
+            "Timing manipulation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Timing exploits specific moments of vulnerability or opportunity."
+        },
+        {
+          "id": "advanced-087",
+          "difficulty": 7,
+          "question": "What is 'psychological profiling'?",
+          "options": [
+            "Personality analysis",
+            "Behavior prediction",
+            "Psychological assessment",
+            "Character reading"
+          ],
+          "correct_answer": 0,
+          "explanation": "Psychological profiling analyzes personality traits for targeted attacks."
+        },
+        {
+          "id": "advanced-088",
+          "difficulty": 8,
+          "question": "Which attack uses emotional manipulation?",
+          "options": [
+            "Emotional blackmail",
+            "Feeling exploitation",
+            "Sentiment manipulation",
+            "Mood influence"
+          ],
+          "correct_answer": 1,
+          "explanation": "Emotional manipulation exploits feelings and emotional states."
+        },
+        {
+          "id": "advanced-089",
+          "difficulty": 9,
+          "question": "What is 'cognitive dissonance' exploitation?",
+          "options": [
+            "Mental conflict creation",
+            "Inconsistency exploitation",
+            "Tension creation",
+            "Conflict manipulation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Cognitive dissonance exploits the discomfort of contradictory beliefs."
+        },
+        {
+          "id": "advanced-090",
+          "difficulty": 10,
+          "question": "Which technique uses mirror neurons?",
+          "options": [
+            "Neural mirroring",
+            "Empathy manipulation",
+            "Emotional contagion",
+            "Synchrony creation"
+          ],
+          "correct_answer": 2,
+          "explanation": "Mirror neurons can be used to create emotional synchrony and rapport."
+        },
+        {
+          "id": "advanced-091",
+          "difficulty": 1,
+          "question": "What is 'information elicitation'?",
+          "options": [
+            "Data extraction",
+            "Questioning techniques",
+            "Information gathering",
+            "Interview methods"
+          ],
+          "correct_answer": 2,
+          "explanation": "Information elicitation uses conversation to gather sensitive data."
+        },
+        {
+          "id": "advanced-092",
+          "difficulty": 2,
+          "question": "Which technique uses body language?",
+          "options": [
+            "Non-verbal cues",
+            "Physical communication",
+            "Body signals",
+            "Gestural manipulation"
+          ],
+          "correct_answer": 0,
+          "explanation": "Body language interpretation and manipulation aids social engineering."
+        },
+        {
+          "id": "advanced-093",
+          "difficulty": 3,
+          "question": "What is 'rapport building'?",
+          "options": [
+            "Relationship creation",
+            "Trust establishment",
+            "Connection building",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Rapport building creates trust and positive relationships."
+        },
+        {
+          "id": "advanced-094",
+          "difficulty": 4,
+          "question": "Which attack uses group dynamics?",
+          "options": [
+            "Group manipulation",
+            "Team influence",
+            "Social pressure",
+            "Peer influence"
+          ],
+          "correct_answer": 2,
+          "explanation": "Group dynamics can create social pressure for compliance."
+        },
+        {
+          "id": "advanced-095",
+          "difficulty": 5,
+          "question": "What is 'authority bias'?",
+          "options": [
+            "Authority respect",
+            "Power obedience",
+            "Authority compliance",
+            "Hierarchical respect"
+          ],
+          "correct_answer": 1,
+          "explanation": "Authority bias leads to automatic obedience to perceived authority."
+        },
+        {
+          "id": "advanced-096",
+          "difficulty": 6,
+          "question": "Which technique uses conformity?",
+          "options": [
+            "Group following",
+            "Peer pressure",
+            "Social norms",
+            "Conformity pressure"
+          ],
+          "correct_answer": 1,
+          "explanation": "Conformity exploits the tendency to follow group behavior."
+        },
+        {
+          "id": "advanced-097",
+          "difficulty": 7,
+          "question": "What is 'loss aversion'?",
+          "options": [
+            "Loss avoidance",
+            "Risk aversion",
+            "Fear of loss",
+            "Loss prevention"
+          ],
+          "correct_answer": 2,
+          "explanation": "Loss aversion makes people more motivated to avoid losses than gain rewards."
+        },
+        {
+          "id": "advanced-098",
+          "difficulty": 8,
+          "question": "Which attack uses confirmation bias?",
+          "options": [
+            "Bias confirmation",
+            "Belief reinforcement",
+            "Information filtering",
+            "Selective attention"
+          ],
+          "correct_answer": 1,
+          "explanation": "Confirmation bias leads people to favor information that confirms beliefs."
+        },
+        {
+          "id": "advanced-099",
+          "difficulty": 9,
+          "question": "What is 'availability heuristic'?",
+          "options": [
+            "Easy recall",
+            "Recent events bias",
+            "Memory-based judgment",
+            "Familiarity bias"
+          ],
+          "correct_answer": 2,
+          "explanation": "Availability heuristic judges likelihood based on how easily examples come to mind."
+        },
+        {
+          "id": "advanced-100",
+          "difficulty": 10,
+          "question": "Which technique uses quantum cognition?",
+          "options": [
+            "Quantum thinking",
+            "Probabilistic reasoning",
+            "Uncertainty exploitation",
+            "Quantum decision making"
+          ],
+          "correct_answer": 1,
+          "explanation": "Quantum cognition models how people make decisions under uncertainty."
+        }
+      ]
+    },
+    {
+      "id": "social-engineering",
+      "name": "Social Engineering",
+      "description": "Human-focused attack techniques and psychology",
+      "questions": [
+        {
+          "id": "social-001",
+          "difficulty": 1,
+          "question": "What is social engineering?",
+          "options": [
+            "Engineering social networks",
+            "Manipulating people to divulge confidential information",
+            "Building social skills",
+            "Engineering software"
+          ],
+          "correct_answer": 1,
+          "explanation": "Social engineering exploits human psychology rather than technical vulnerabilities."
+        },
+        {
+          "id": "social-002",
+          "difficulty": 1,
+          "question": "Which principle of influence involves creating urgency?",
+          "options": [
+            "Authority",
+            "Scarcity",
+            "Social proof",
+            "Reciprocity"
+          ],
+          "correct_answer": 1,
+          "explanation": "Scarcity creates urgency by suggesting limited availability or time-sensitive opportunities."
+        },
+        {
+          "id": "social-003",
+          "difficulty": 2,
+          "question": "What is 'pretexting'?",
+          "options": [
+            "Creating excuses",
+            "Fabricating scenarios to obtain information",
+            "Texting before calls",
+            "Pre-text analysis"
+          ],
+          "correct_answer": 1,
+          "explanation": "Pretexting involves creating false pretenses to gain access to sensitive information."
+        },
+        {
+          "id": "social-004",
+          "difficulty": 2,
+          "question": "Which social engineering technique uses flattery?",
+          "options": [
+            "Authority",
+            "Ingratiation",
+            "Social proof",
+            "Commitment"
+          ],
+          "correct_answer": 1,
+          "explanation": "Ingratiation uses compliments and flattery to build rapport and trust."
+        },
+        {
+          "id": "social-005",
+          "difficulty": 3,
+          "question": "What is 'shoulder surfing'?",
+          "options": [
+            "Surfing websites",
+            "Looking over someone's shoulder to see sensitive information",
+            "Beach attacks",
+            "Network monitoring"
+          ],
+          "correct_answer": 1,
+          "explanation": "Shoulder surfing involves observing someone entering sensitive information like PINs or passwords."
+        },
+        {
+          "id": "social-006",
+          "difficulty": 3,
+          "question": "Which principle involves returning favors?",
+          "options": [
+            "Authority",
+            "Scarcity",
+            "Reciprocity",
+            "Consistency"
+          ],
+          "correct_answer": 2,
+          "explanation": "Reciprocity makes people feel obligated to return favors or information."
+        },
+        {
+          "id": "social-007",
+          "difficulty": 4,
+          "question": "What is 'quid pro quo' in social engineering?",
+          "options": [
+            "Equal exchange",
+            "Trading information for services",
+            "Legal agreements",
+            "Business deals"
+          ],
+          "correct_answer": 1,
+          "explanation": "Quid pro quo offers something in exchange for sensitive information."
+        },
+        {
+          "id": "social-008",
+          "difficulty": 4,
+          "question": "Which technique involves creating fake identities?",
+          "options": [
+            "Impersonation",
+            "Identity theft",
+            "Both A and B",
+            "Neither"
+          ],
+          "correct_answer": 2,
+          "explanation": "Both impersonation and identity theft involve creating or using fake identities."
+        },
+        {
+          "id": "social-009",
+          "difficulty": 5,
+          "question": "What is 'tailgating'?",
+          "options": [
+            "Following someone closely",
+            "Following authorized personnel through security doors",
+            "Car tailgating",
+            "Network following"
+          ],
+          "correct_answer": 1,
+          "explanation": "Tailgating involves following someone through access-controlled areas without proper authorization."
+        },
+        {
+          "id": "social-010",
+          "difficulty": 5,
+          "question": "Which social engineering principle uses peer pressure?",
+          "options": [
+            "Authority",
+            "Social proof",
+            "Scarcity",
+            "Liking"
+          ],
+          "correct_answer": 1,
+          "explanation": "Social proof leverages the tendency to follow what others are doing."
+        },
+        {
+          "id": "social-011",
+          "difficulty": 6,
+          "question": "What is 'reverse social engineering'?",
+          "options": [
+            "Engineering in reverse",
+            "Getting victims to contact the attacker",
+            "Social engineering backwards",
+            "Defensive social engineering"
+          ],
+          "correct_answer": 1,
+          "explanation": "Reverse social engineering involves positioning oneself as a helpful expert that victims contact."
+        },
+        {
+          "id": "social-012",
+          "difficulty": 6,
+          "question": "Which technique involves dumpster diving?",
+          "options": [
+            "Searching trash for information",
+            "Deep web research",
+            "Data mining",
+            "Digital forensics"
+          ],
+          "correct_answer": 0,
+          "explanation": "Dumpster diving involves searching through trash for discarded sensitive information."
+        },
+        {
+          "id": "social-013",
+          "difficulty": 7,
+          "question": "What is 'piggybacking'?",
+          "options": [
+            "Riding on someone's back",
+            "Convincing someone to allow access for both",
+            "Network piggybacking",
+            "Data sharing"
+          ],
+          "correct_answer": 1,
+          "explanation": "Piggybacking involves convincing authorized personnel to allow unauthorized access."
+        },
+        {
+          "id": "social-014",
+          "difficulty": 7,
+          "question": "Which principle involves building relationships?",
+          "options": [
+            "Authority",
+            "Liking",
+            "Scarcity",
+            "Reciprocity"
+          ],
+          "correct_answer": 1,
+          "explanation": "Liking builds trust through rapport and similarity."
+        },
+        {
+          "id": "social-015",
+          "difficulty": 8,
+          "question": "What is 'eavesdropping' in social engineering?",
+          "options": [
+            "Listening to conversations",
+            "Electronic surveillance",
+            "Both A and B",
+            "Neither"
+          ],
+          "correct_answer": 2,
+          "explanation": "Eavesdropping can be both passive listening and electronic surveillance."
+        },
+        {
+          "id": "social-016",
+          "difficulty": 8,
+          "question": "Which technique uses psychological manipulation?",
+          "options": [
+            "Authority",
+            "Manipulation",
+            "All social engineering",
+            "Technical attacks"
+          ],
+          "correct_answer": 2,
+          "explanation": "All social engineering techniques use psychological manipulation to some degree."
+        },
+        {
+          "id": "social-017",
+          "difficulty": 9,
+          "question": "What is 'micro-expressions' in social engineering?",
+          "options": [
+            "Small expressions",
+            "Brief facial expressions revealing emotions",
+            "Microphone expressions",
+            "Small talk"
+          ],
+          "correct_answer": 1,
+          "explanation": "Micro-expressions are brief, involuntary facial expressions that reveal true emotions."
+        },
+        {
+          "id": "social-018",
+          "difficulty": 9,
+          "question": "Which technique involves creating cognitive dissonance?",
+          "options": [
+            "Authority",
+            "Consistency",
+            "Cognitive manipulation",
+            "Mental pressure"
+          ],
+          "correct_answer": 1,
+          "explanation": "Consistency exploits the desire to appear consistent in behavior and beliefs."
+        },
+        {
+          "id": "social-019",
+          "difficulty": 10,
+          "question": "What is 'neuro-linguistic programming' in social engineering?",
+          "options": [
+            "Brain programming",
+            "Psychological manipulation techniques",
+            "NLP processing",
+            "Neural networks"
+          ],
+          "correct_answer": 1,
+          "explanation": "NLP involves using language patterns and psychological techniques for influence."
+        },
+        {
+          "id": "social-020",
+          "difficulty": 10,
+          "question": "Which advanced technique uses hypnosis?",
+          "options": [
+            "Hypnotic suggestion",
+            "Mind control",
+            "Advanced persuasion",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Advanced social engineering can involve hypnotic techniques and mind control methods."
+        },
+        {
+          "id": "social-021",
+          "difficulty": 1,
+          "question": "What is the most common social engineering attack?",
+          "options": [
+            "Physical break-in",
+            "Phone scams",
+            "Email phishing",
+            "USB drops"
+          ],
+          "correct_answer": 2,
+          "explanation": "Email phishing is the most common form of social engineering attack."
+        },
+        {
+          "id": "social-022",
+          "difficulty": 1,
+          "question": "Which principle makes people return favors?",
+          "options": [
+            "Authority",
+            "Reciprocity",
+            "Scarcity",
+            "Social proof"
+          ],
+          "correct_answer": 1,
+          "explanation": "Reciprocity creates a sense of obligation to return favors or information."
+        },
+        {
+          "id": "social-023",
+          "difficulty": 2,
+          "question": "What is 'baiting'?",
+          "options": [
+            "Fishing bait",
+            "Tempting offers to lure victims",
+            "Food-based attacks",
+            "Hook placement"
+          ],
+          "correct_answer": 1,
+          "explanation": "Baiting uses tempting offers or items to trick people into compromising security."
+        },
+        {
+          "id": "social-024",
+          "difficulty": 2,
+          "question": "Which technique involves creating fake identities?",
+          "options": [
+            "Identity creation",
+            "Persona building",
+            "Impersonation",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Social engineering often involves creating fake identities or impersonating others."
+        },
+        {
+          "id": "social-025",
+          "difficulty": 3,
+          "question": "What is 'authority compliance'?",
+          "options": [
+            "Following leaders",
+            "Obeying perceived authority figures",
+            "Authority respect",
+            "Power obedience"
+          ],
+          "correct_answer": 1,
+          "explanation": "People tend to obey perceived authority figures without question."
+        },
+        {
+          "id": "social-026",
+          "difficulty": 3,
+          "question": "Which attack uses urgency to manipulate?",
+          "options": [
+            "Urgency attacks",
+            "Scarcity principle",
+            "Time pressure",
+            "Deadline manipulation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Scarcity creates urgency and pressure to act quickly without thinking."
+        },
+        {
+          "id": "social-027",
+          "difficulty": 4,
+          "question": "What is 'social proof' in social engineering?",
+          "options": [
+            "Social validation",
+            "Peer pressure tactics",
+            "Group following",
+            "Consensus building"
+          ],
+          "correct_answer": 1,
+          "explanation": "Social proof uses peer pressure and the tendency to follow what others do."
+        },
+        {
+          "id": "social-028",
+          "difficulty": 4,
+          "question": "Which technique builds trust through similarity?",
+          "options": [
+            "Similarity attraction",
+            "Liking principle",
+            "Rapport building",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "The liking principle builds trust through similarity and rapport."
+        },
+        {
+          "id": "social-029",
+          "difficulty": 5,
+          "question": "What is 'commitment escalation'?",
+          "options": [
+            "Increasing dedication",
+            "Small commitments leading to larger ones",
+            "Promise building",
+            "Consistency exploitation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Small initial commitments can lead to larger concessions over time."
+        },
+        {
+          "id": "social-030",
+          "difficulty": 5,
+          "question": "Which attack exploits fear of missing out?",
+          "options": [
+            "FOMO attacks",
+            "Scarcity exploitation",
+            "Urgency creation",
+            "Limited opportunity attacks"
+          ],
+          "correct_answer": 0,
+          "explanation": "FOMO (Fear Of Missing Out) creates urgency through limited opportunities."
+        },
+        {
+          "id": "social-031",
+          "difficulty": 6,
+          "question": "What is 'framing effect'?",
+          "options": [
+            "Picture framing",
+            "Context manipulation",
+            "Perspective shaping",
+            "Information presentation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Framing manipulates how information is presented to influence decisions."
+        },
+        {
+          "id": "social-032",
+          "difficulty": 6,
+          "question": "Which technique uses emotional appeals?",
+          "options": [
+            "Emotional manipulation",
+            "Feeling exploitation",
+            "Sentiment attacks",
+            "Heart-based persuasion"
+          ],
+          "correct_answer": 0,
+          "explanation": "Emotional manipulation exploits feelings like fear, greed, or sympathy."
+        },
+        {
+          "id": "social-033",
+          "difficulty": 7,
+          "question": "What is 'cognitive dissonance'?",
+          "options": [
+            "Mental confusion",
+            "Contradictory belief discomfort",
+            "Thinking conflict",
+            "Idea inconsistency"
+          ],
+          "correct_answer": 1,
+          "explanation": "Cognitive dissonance creates discomfort from holding contradictory beliefs."
+        },
+        {
+          "id": "social-034",
+          "difficulty": 7,
+          "question": "Which principle uses conformity?",
+          "options": [
+            "Group pressure",
+            "Social proof",
+            "Peer influence",
+            "Consensus building"
+          ],
+          "correct_answer": 1,
+          "explanation": "Social proof leverages conformity and peer pressure."
+        },
+        {
+          "id": "social-035",
+          "difficulty": 8,
+          "question": "What is 'anchoring bias'?",
+          "options": [
+            "Initial reference",
+            "First impression influence",
+            "Starting point bias",
+            "Anchor setting"
+          ],
+          "correct_answer": 0,
+          "explanation": "Anchoring establishes a reference point that influences subsequent judgments."
+        },
+        {
+          "id": "social-036",
+          "difficulty": 8,
+          "question": "Which technique uses loss aversion?",
+          "options": [
+            "Loss avoidance",
+            "Fear of loss",
+            "Risk aversion",
+            "Loss prevention"
+          ],
+          "correct_answer": 1,
+          "explanation": "Loss aversion makes people more motivated to avoid losses than gain rewards."
+        },
+        {
+          "id": "social-037",
+          "difficulty": 9,
+          "question": "What is 'confirmation bias'?",
+          "options": [
+            "Bias confirmation",
+            "Belief reinforcement",
+            "Information filtering",
+            "Selective perception"
+          ],
+          "correct_answer": 1,
+          "explanation": "Confirmation bias leads people to favor information that confirms existing beliefs."
+        },
+        {
+          "id": "social-038",
+          "difficulty": 9,
+          "question": "Which attack uses micro-expressions?",
+          "options": [
+            "Facial analysis",
+            "Emotion reading",
+            "Lie detection",
+            "Expression interpretation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Micro-expressions are brief facial expressions that reveal true emotions."
+        },
+        {
+          "id": "social-039",
+          "difficulty": 10,
+          "question": "What is 'neuro-linguistic programming'?",
+          "options": [
+            "Brain language",
+            "Psychological manipulation techniques",
+            "Mind programming",
+            "Neural communication"
+          ],
+          "correct_answer": 1,
+          "explanation": "NLP uses language patterns and psychological techniques for influence and persuasion."
+        },
+        {
+          "id": "social-040",
+          "difficulty": 10,
+          "question": "Which technique uses mirror neurons?",
+          "options": [
+            "Neural mirroring",
+            "Empathy creation",
+            "Emotional synchrony",
+            "Brain wave matching"
+          ],
+          "correct_answer": 2,
+          "explanation": "Mirror neurons create emotional synchrony and enhance rapport building."
+        },
+        {
+          "id": "social-041",
+          "difficulty": 1,
+          "question": "What is the first step in social engineering?",
+          "options": [
+            "Attack execution",
+            "Information gathering",
+            "Trust building",
+            "Data collection"
+          ],
+          "correct_answer": 1,
+          "explanation": "Information gathering is crucial for planning effective social engineering attacks."
+        },
+        {
+          "id": "social-042",
+          "difficulty": 2,
+          "question": "Which social engineering method uses phones?",
+          "options": [
+            "Phone engineering",
+            "Vishing",
+            "Call manipulation",
+            "Voice attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Vishing is voice phishing conducted over telephone calls."
+        },
+        {
+          "id": "social-043",
+          "difficulty": 3,
+          "question": "What is 'reverse social engineering'?",
+          "options": [
+            "Engineering in reverse",
+            "Victim contacts attacker",
+            "Helpful positioning",
+            "Backwards manipulation"
+          ],
+          "correct_answer": 2,
+          "explanation": "Reverse social engineering positions the attacker as someone the victim contacts for help."
+        },
+        {
+          "id": "social-044",
+          "difficulty": 4,
+          "question": "Which technique uses observation?",
+          "options": [
+            "People watching",
+            "Behavioral analysis",
+            "Pattern recognition",
+            "Information gathering"
+          ],
+          "correct_answer": 1,
+          "explanation": "Behavioral analysis observes patterns and habits to gather useful information."
+        },
+        {
+          "id": "social-045",
+          "difficulty": 5,
+          "question": "What is 'piggybacking'?",
+          "options": [
+            "Carrying items",
+            "Following authorized access",
+            "Shared entry",
+            "Dual access"
+          ],
+          "correct_answer": 1,
+          "explanation": "Piggybacking involves following someone with authorized access through security."
+        },
+        {
+          "id": "social-046",
+          "difficulty": 6,
+          "question": "Which attack uses fake websites?",
+          "options": [
+            "Website engineering",
+            "Phishing sites",
+            "Fake portals",
+            "Imitation attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Phishing sites are fake websites designed to steal information."
+        },
+        {
+          "id": "social-047",
+          "difficulty": 7,
+          "question": "What is 'tailgating'?",
+          "options": [
+            "Following behind",
+            "Unauthorized entry following",
+            "Door access",
+            "Entry manipulation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Tailgating involves entering secured areas by following authorized personnel."
+        },
+        {
+          "id": "social-048",
+          "difficulty": 8,
+          "question": "Which technique uses USB drives?",
+          "options": [
+            "USB engineering",
+            "Device baiting",
+            "Hardware drops",
+            "Physical media attacks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Device baiting uses infected USB drives left for victims to find."
+        },
+        {
+          "id": "social-049",
+          "difficulty": 9,
+          "question": "What is 'eavesdropping'?",
+          "options": [
+            "Listening devices",
+            "Overhearing conversations",
+            "Information gathering",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Eavesdropping involves secretly listening to or overhearing conversations."
+        },
+        {
+          "id": "social-050",
+          "difficulty": 10,
+          "question": "Which technique uses hypnosis?",
+          "options": [
+            "Mind control",
+            "Trance induction",
+            "Suggestion techniques",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Hypnosis can be used for advanced social engineering manipulation."
+        },
+        {
+          "id": "social-051",
+          "difficulty": 1,
+          "question": "What is the goal of social engineering?",
+          "options": [
+            "System destruction",
+            "Information theft",
+            "Network damage",
+            "Hardware theft"
+          ],
+          "correct_answer": 1,
+          "explanation": "Social engineering primarily aims to steal sensitive information or access."
+        },
+        {
+          "id": "social-052",
+          "difficulty": 2,
+          "question": "Which principle involves obligation?",
+          "options": [
+            "Duty",
+            "Reciprocity",
+            "Responsibility",
+            "Commitment"
+          ],
+          "correct_answer": 1,
+          "explanation": "Reciprocity creates a sense of obligation to return favors."
+        },
+        {
+          "id": "social-053",
+          "difficulty": 3,
+          "question": "What is 'pretexting'?",
+          "options": [
+            "Creating pretexts",
+            "False scenario creation",
+            "Story fabrication",
+            "Cover story"
+          ],
+          "correct_answer": 1,
+          "explanation": "Pretexting involves creating false scenarios to obtain information."
+        },
+        {
+          "id": "social-054",
+          "difficulty": 4,
+          "question": "Which technique builds relationships?",
+          "options": [
+            "Relationship engineering",
+            "Rapport building",
+            "Trust creation",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Social engineering builds relationships and trust to extract information."
+        },
+        {
+          "id": "social-055",
+          "difficulty": 5,
+          "question": "What is 'in-group bias'?",
+          "options": [
+            "Group preference",
+            "Internal favoritism",
+            "Team loyalty",
+            "Insider trust"
+          ],
+          "correct_answer": 0,
+          "explanation": "In-group bias leads to preferential treatment of those perceived as part of one's group."
+        },
+        {
+          "id": "social-056",
+          "difficulty": 6,
+          "question": "Which attack uses authority symbols?",
+          "options": [
+            "Authority display",
+            "Badge flashing",
+            "Uniform wearing",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Authority symbols like badges and uniforms can be used to gain compliance."
+        },
+        {
+          "id": "social-057",
+          "difficulty": 7,
+          "question": "What is 'availability heuristic'?",
+          "options": [
+            "Easy recall",
+            "Recent event bias",
+            "Memory judgment",
+            "Familiarity effect"
+          ],
+          "correct_answer": 2,
+          "explanation": "Availability heuristic judges probability based on how easily examples come to mind."
+        },
+        {
+          "id": "social-058",
+          "difficulty": 8,
+          "question": "Which technique uses group dynamics?",
+          "options": [
+            "Group manipulation",
+            "Team influence",
+            "Social pressure",
+            "Peer influence"
+          ],
+          "correct_answer": 2,
+          "explanation": "Group dynamics can create pressure for conformity and compliance."
+        },
+        {
+          "id": "social-059",
+          "difficulty": 9,
+          "question": "What is 'subliminal persuasion'?",
+          "options": [
+            "Hidden messages",
+            "Below-conscious influence",
+            "Unconscious persuasion",
+            "Subtle manipulation"
+          ],
+          "correct_answer": 2,
+          "explanation": "Subliminal persuasion influences behavior below conscious awareness."
+        },
+        {
+          "id": "social-060",
+          "difficulty": 10,
+          "question": "Which technique uses quantum cognition?",
+          "options": [
+            "Quantum thinking",
+            "Probabilistic reasoning",
+            "Uncertainty exploitation",
+            "Quantum decision modeling"
+          ],
+          "correct_answer": 1,
+          "explanation": "Quantum cognition models how people make decisions under uncertainty."
+        },
+        {
+          "id": "social-061",
+          "difficulty": 1,
+          "question": "What is 'information elicitation'?",
+          "options": [
+            "Data extraction",
+            "Question techniques",
+            "Information gathering",
+            "Interview methods"
+          ],
+          "correct_answer": 2,
+          "explanation": "Information elicitation uses conversation techniques to gather sensitive data."
+        },
+        {
+          "id": "social-062",
+          "difficulty": 2,
+          "question": "Which principle uses liking?",
+          "options": [
+            "Friendship building",
+            "Rapport creation",
+            "Similarity attraction",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "The liking principle builds trust through similarity and positive relationships."
+        },
+        {
+          "id": "social-063",
+          "difficulty": 3,
+          "question": "What is 'body language reading'?",
+          "options": [
+            "Posture analysis",
+            "Non-verbal communication",
+            "Physical cues",
+            "Gestural interpretation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Body language reading interprets non-verbal cues for manipulation or detection."
+        },
+        {
+          "id": "social-064",
+          "difficulty": 4,
+          "question": "Which attack uses timing?",
+          "options": [
+            "Time-based attacks",
+            "Opportunity exploitation",
+            "Moment selection",
+            "Timing manipulation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Timing exploits vulnerable moments like stress or distraction."
+        },
+        {
+          "id": "social-065",
+          "difficulty": 5,
+          "question": "What is 'authority bias'?",
+          "options": [
+            "Authority respect",
+            "Power obedience",
+            "Authority compliance",
+            "Hierarchical submission"
+          ],
+          "correct_answer": 1,
+          "explanation": "Authority bias leads to automatic obedience to perceived authority figures."
+        },
+        {
+          "id": "social-066",
+          "difficulty": 6,
+          "question": "Which technique uses conformity?",
+          "options": [
+            "Group following",
+            "Peer pressure",
+            "Social norms",
+            "Consensus building"
+          ],
+          "correct_answer": 1,
+          "explanation": "Conformity exploits the tendency to follow group behavior."
+        },
+        {
+          "id": "social-067",
+          "difficulty": 7,
+          "question": "What is 'loss aversion'?",
+          "options": [
+            "Loss avoidance",
+            "Risk aversion",
+            "Fear of loss",
+            "Loss prevention"
+          ],
+          "correct_answer": 2,
+          "explanation": "Loss aversion makes losses more painful than equivalent gains are pleasurable."
+        },
+        {
+          "id": "social-068",
+          "difficulty": 8,
+          "question": "Which attack uses cognitive biases?",
+          "options": [
+            "Bias exploitation",
+            "Mental shortcuts",
+            "Thinking errors",
+            "Psychological weaknesses"
+          ],
+          "correct_answer": 0,
+          "explanation": "Cognitive biases are systematic thinking errors that can be exploited."
+        },
+        {
+          "id": "social-069",
+          "difficulty": 9,
+          "question": "What is 'emotional contagion'?",
+          "options": [
+            "Emotion spreading",
+            "Feeling transmission",
+            "Mood influence",
+            "Sentiment transfer"
+          ],
+          "correct_answer": 1,
+          "explanation": "Emotional contagion is the tendency to feel and express emotions similar to others."
+        },
+        {
+          "id": "social-070",
+          "difficulty": 10,
+          "question": "Which technique uses mirror neurons?",
+          "options": [
+            "Neural mirroring",
+            "Empathy induction",
+            "Synchrony creation",
+            "Emotional matching"
+          ],
+          "correct_answer": 2,
+          "explanation": "Mirror neurons help create emotional synchrony and enhance persuasion."
+        },
+        {
+          "id": "social-071",
+          "difficulty": 1,
+          "question": "What is 'dumpster diving'?",
+          "options": [
+            "Trash searching",
+            "Physical information gathering",
+            "Document recovery",
+            "Waste analysis"
+          ],
+          "correct_answer": 1,
+          "explanation": "Dumpster diving involves searching through discarded materials for information."
+        },
+        {
+          "id": "social-072",
+          "difficulty": 2,
+          "question": "Which technique uses flattery?",
+          "options": [
+            "Compliment attacks",
+            "Ingratiation",
+            "Praise manipulation",
+            "Ego boosting"
+          ],
+          "correct_answer": 1,
+          "explanation": "Ingratiation uses flattery and compliments to build trust."
+        },
+        {
+          "id": "social-073",
+          "difficulty": 3,
+          "question": "What is 'psychological profiling'?",
+          "options": [
+            "Personality analysis",
+            "Behavior prediction",
+            "Psychological assessment",
+            "Character evaluation"
+          ],
+          "correct_answer": 0,
+          "explanation": "Psychological profiling analyzes personality traits for targeted manipulation."
+        },
+        {
+          "id": "social-074",
+          "difficulty": 4,
+          "question": "Which attack uses multiple channels?",
+          "options": [
+            "Multi-channel attacks",
+            "Omni-channel engineering",
+            "Cross-platform manipulation",
+            "Channel combination"
+          ],
+          "correct_answer": 0,
+          "explanation": "Multi-channel attacks combine various communication methods for effectiveness."
+        },
+        {
+          "id": "social-075",
+          "difficulty": 5,
+          "question": "What is 'layered deception'?",
+          "options": [
+            "Multi-layer lies",
+            "Stacked manipulation",
+            "Complex deception",
+            "Hierarchical lies"
+          ],
+          "correct_answer": 1,
+          "explanation": "Layered deception combines multiple manipulation techniques simultaneously."
+        },
+        {
+          "id": "social-076",
+          "difficulty": 6,
+          "question": "Which technique uses observation?",
+          "options": [
+            "Surveillance",
+            "Behavioral monitoring",
+            "Pattern analysis",
+            "Information collection"
+          ],
+          "correct_answer": 1,
+          "explanation": "Behavioral monitoring observes habits and patterns for exploitation."
+        },
+        {
+          "id": "social-077",
+          "difficulty": 7,
+          "question": "What is 'framing manipulation'?",
+          "options": [
+            "Context control",
+            "Perspective shaping",
+            "Information presentation",
+            "Message control"
+          ],
+          "correct_answer": 1,
+          "explanation": "Framing manipulation controls how information is perceived and interpreted."
+        },
+        {
+          "id": "social-078",
+          "difficulty": 8,
+          "question": "Which attack uses emotional triggers?",
+          "options": [
+            "Emotional manipulation",
+            "Feeling exploitation",
+            "Sentiment attacks",
+            "Mood manipulation"
+          ],
+          "correct_answer": 0,
+          "explanation": "Emotional manipulation exploits feelings like fear, greed, or sympathy."
+        },
+        {
+          "id": "social-079",
+          "difficulty": 9,
+          "question": "What is 'cognitive load manipulation'?",
+          "options": [
+            "Mental overload",
+            "Thinking capacity exploitation",
+            "Decision fatigue",
+            "Mental exhaustion"
+          ],
+          "correct_answer": 1,
+          "explanation": "Cognitive load manipulation overwhelms thinking capacity to reduce resistance."
+        },
+        {
+          "id": "social-080",
+          "difficulty": 10,
+          "question": "Which technique uses quantum psychology?",
+          "options": [
+            "Quantum thinking",
+            "Probabilistic persuasion",
+            "Uncertainty manipulation",
+            "Quantum decision influence"
+          ],
+          "correct_answer": 1,
+          "explanation": "Quantum psychology models how people make decisions under uncertainty."
+        },
+        {
+          "id": "social-081",
+          "difficulty": 1,
+          "question": "What is 'social engineering awareness'?",
+          "options": [
+            "Engineering knowledge",
+            "Manipulation recognition",
+            "Social training",
+            "Awareness education"
+          ],
+          "correct_answer": 1,
+          "explanation": "Social engineering awareness helps recognize manipulation attempts."
+        },
+        {
+          "id": "social-082",
+          "difficulty": 2,
+          "question": "Which principle creates obligation?",
+          "options": [
+            "Duty creation",
+            "Reciprocity",
+            "Responsibility",
+            "Commitment"
+          ],
+          "correct_answer": 1,
+          "explanation": "Reciprocity creates a sense of obligation to return favors."
+        },
+        {
+          "id": "social-083",
+          "difficulty": 3,
+          "question": "What is 'rapport building'?",
+          "options": [
+            "Relationship creation",
+            "Trust establishment",
+            "Connection building",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Rapport building creates positive relationships and trust."
+        },
+        {
+          "id": "social-084",
+          "difficulty": 4,
+          "question": "Which technique uses peer pressure?",
+          "options": [
+            "Group influence",
+            "Social proof",
+            "Peer conformity",
+            "Consensus pressure"
+          ],
+          "correct_answer": 1,
+          "explanation": "Social proof uses peer pressure and conformity."
+        },
+        {
+          "id": "social-085",
+          "difficulty": 5,
+          "question": "What is 'authority exploitation'?",
+          "options": [
+            "Power abuse",
+            "Authority compliance",
+            "Obedience manipulation",
+            "Hierarchy exploitation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Authority exploitation leverages automatic obedience to authority figures."
+        },
+        {
+          "id": "social-086",
+          "difficulty": 6,
+          "question": "Which attack uses scarcity?",
+          "options": [
+            "Limited availability",
+            "Urgency creation",
+            "Time pressure",
+            "Resource manipulation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Scarcity creates urgency through perceived limited availability."
+        },
+        {
+          "id": "social-087",
+          "difficulty": 7,
+          "question": "What is 'consistency principle'?",
+          "options": [
+            "Behavior alignment",
+            "Commitment maintenance",
+            "Promise keeping",
+            "Pattern consistency"
+          ],
+          "correct_answer": 1,
+          "explanation": "Consistency principle exploits the desire to appear consistent."
+        },
+        {
+          "id": "social-088",
+          "difficulty": 8,
+          "question": "Which technique uses liking?",
+          "options": [
+            "Attraction manipulation",
+            "Rapport creation",
+            "Similarity exploitation",
+            "Relationship building"
+          ],
+          "correct_answer": 2,
+          "explanation": "Liking principle exploits attraction through similarity and rapport."
+        },
+        {
+          "id": "social-089",
+          "difficulty": 9,
+          "question": "What is 'emotional intelligence exploitation'?",
+          "options": [
+            "EQ manipulation",
+            "Emotional awareness",
+            "Feeling exploitation",
+            "Sentiment manipulation"
+          ],
+          "correct_answer": 2,
+          "explanation": "Emotional intelligence exploitation uses understanding of emotions for manipulation."
+        },
+        {
+          "id": "social-090",
+          "difficulty": 10,
+          "question": "Which technique uses mirror neurons?",
+          "options": [
+            "Neural mirroring",
+            "Empathy creation",
+            "Synchrony building",
+            "Emotional resonance"
+          ],
+          "correct_answer": 2,
+          "explanation": "Mirror neurons help create emotional synchrony and understanding."
+        },
+        {
+          "id": "social-091",
+          "difficulty": 1,
+          "question": "What is 'physical social engineering'?",
+          "options": [
+            "Body manipulation",
+            "Physical access attacks",
+            "In-person manipulation",
+            "Personal interaction"
+          ],
+          "correct_answer": 1,
+          "explanation": "Physical social engineering involves in-person manipulation for access."
+        },
+        {
+          "id": "social-092",
+          "difficulty": 2,
+          "question": "Which technique uses USB baiting?",
+          "options": [
+            "USB drops",
+            "Device placement",
+            "Hardware baiting",
+            "Physical media attacks"
+          ],
+          "correct_answer": 0,
+          "explanation": "USB drops involve leaving infected USB drives for victims to find."
+        },
+        {
+          "id": "social-093",
+          "difficulty": 3,
+          "question": "What is 'shoulder surfing'?",
+          "options": [
+            "Beach activity",
+            "Over-the-shoulder observation",
+            "Visual eavesdropping",
+            "Screen watching"
+          ],
+          "correct_answer": 2,
+          "explanation": "Shoulder surfing involves watching someone enter sensitive information."
+        },
+        {
+          "id": "social-094",
+          "difficulty": 4,
+          "question": "Which attack uses fake uniforms?",
+          "options": [
+            "Costume attacks",
+            "Impersonation",
+            "Authority deception",
+            "Identity disguise"
+          ],
+          "correct_answer": 1,
+          "explanation": "Impersonation uses fake uniforms or credentials to gain access."
+        },
+        {
+          "id": "social-095",
+          "difficulty": 5,
+          "question": "What is 'reverse interrogation'?",
+          "options": [
+            "Backwards questioning",
+            "Victim interviews attacker",
+            "Helpful positioning",
+            "Reverse social engineering"
+          ],
+          "correct_answer": 3,
+          "explanation": "Reverse social engineering positions attacker as helpful expert."
+        },
+        {
+          "id": "social-096",
+          "difficulty": 6,
+          "question": "Which technique uses timing attacks?",
+          "options": [
+            "Time-based manipulation",
+            "Opportunity exploitation",
+            "Moment selection",
+            "Schedule manipulation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Timing exploits vulnerable moments like end of day or high stress."
+        },
+        {
+          "id": "social-097",
+          "difficulty": 7,
+          "question": "What is 'cognitive bias exploitation'?",
+          "options": [
+            "Thinking error use",
+            "Mental shortcut manipulation",
+            "Bias utilization",
+            "Psychological weakness"
+          ],
+          "correct_answer": 1,
+          "explanation": "Cognitive bias exploitation uses systematic thinking errors."
+        },
+        {
+          "id": "social-098",
+          "difficulty": 8,
+          "question": "Which attack uses emotional triggers?",
+          "options": [
+            "Feeling manipulation",
+            "Emotional blackmail",
+            "Sentiment exploitation",
+            "Mood influence"
+          ],
+          "correct_answer": 0,
+          "explanation": "Emotional manipulation exploits specific feelings and emotions."
+        },
+        {
+          "id": "social-099",
+          "difficulty": 9,
+          "question": "What is 'subliminal influence'?",
+          "options": [
+            "Hidden persuasion",
+            "Below-conscious influence",
+            "Unconscious manipulation",
+            "Subtle persuasion"
+          ],
+          "correct_answer": 2,
+          "explanation": "Subliminal influence affects behavior below conscious awareness."
+        },
+        {
+          "id": "social-100",
+          "difficulty": 10,
+          "question": "Which technique uses quantum social dynamics?",
+          "options": [
+            "Quantum manipulation",
+            "Probabilistic persuasion",
+            "Uncertainty exploitation",
+            "Quantum influence"
+          ],
+          "correct_answer": 1,
+          "explanation": "Quantum social dynamics models complex social decision making."
+        }
+      ]
+    },
+    {
+      "id": "email-security",
+      "name": "Email Security Best Practices",
+      "description": "Email security protocols, tools, and preventive measures",
+      "questions": [
+        {
+          "id": "email-001",
+          "difficulty": 1,
+          "question": "What does SPF stand for in email security?",
+          "options": [
+            "Secure Password Framework",
+            "Sender Policy Framework",
+            "Spam Filtering Protocol",
+            "Secure File Protection"
+          ],
+          "correct_answer": 1,
+          "explanation": "SPF (Sender Policy Framework) verifies that email comes from authorized IP addresses."
+        },
+        {
+          "id": "email-002",
+          "difficulty": 1,
+          "question": "Which email encryption provides end-to-end security?",
+          "options": [
+            "TLS",
+            "PGP",
+            "Both A and B",
+            "Neither"
+          ],
+          "correct_answer": 1,
+          "explanation": "PGP provides true end-to-end encryption, while TLS only protects transmission."
+        },
+        {
+          "id": "email-003",
+          "difficulty": 2,
+          "question": "What is DKIM?",
+          "options": [
+            "Domain Key Identification Mail",
+            "Digital Key Infrastructure Mail",
+            "Domain Keys Identified Mail",
+            "Digital Key Identification Method"
+          ],
+          "correct_answer": 2,
+          "explanation": "DKIM (DomainKeys Identified Mail) uses digital signatures to verify email authenticity."
+        },
+        {
+          "id": "email-004",
+          "difficulty": 2,
+          "question": "Which protocol should be used for secure email transmission?",
+          "options": [
+            "SMTP",
+            "POP3",
+            "IMAP",
+            "SMTPS"
+          ],
+          "correct_answer": 3,
+          "explanation": "SMTPS (SMTP Secure) uses SSL/TLS encryption for secure email transmission."
+        },
+        {
+          "id": "email-005",
+          "difficulty": 3,
+          "question": "What is DMARC?",
+          "options": [
+            "Domain-based Message Authentication",
+            "Direct Message Anti-Spam Control",
+            "Domain Mail Authentication Reporting & Conformance",
+            "Digital Mail Anti-Fraud Control"
+          ],
+          "correct_answer": 2,
+          "explanation": "DMARC builds on SPF and DKIM to provide email authentication and reporting."
+        },
+        {
+          "id": "email-006",
+          "difficulty": 3,
+          "question": "Which email header cannot be easily spoofed?",
+          "options": [
+            "From",
+            "Subject",
+            "Received",
+            "Reply-To"
+          ],
+          "correct_answer": 2,
+          "explanation": "Received headers are added by mail servers and are difficult to spoof completely."
+        },
+        {
+          "id": "email-007",
+          "difficulty": 4,
+          "question": "What is S/MIME?",
+          "options": [
+            "Secure/Multipurpose Internet Mail Extensions",
+            "Simple Mail Internet Message Encryption",
+            "Secure Mail Internet Message Extension",
+            "Standard Mail Internet Message Encryption"
+          ],
+          "correct_answer": 0,
+          "explanation": "S/MIME provides encryption and digital signatures for email messages."
+        },
+        {
+          "id": "email-008",
+          "difficulty": 4,
+          "question": "Which attachment type is safest to open?",
+          "options": [
+            ".exe",
+            ".pdf",
+            ".docx",
+            ".txt"
+          ],
+          "correct_answer": 3,
+          "explanation": "Plain text files (.txt) cannot contain executable code or macros."
+        },
+        {
+          "id": "email-009",
+          "difficulty": 5,
+          "question": "What is email quarantining?",
+          "options": [
+            "Deleting suspicious emails",
+            "Isolating suspicious emails for review",
+            "Encrypting all emails",
+            "Blocking all attachments"
+          ],
+          "correct_answer": 1,
+          "explanation": "Quarantining holds suspicious emails for administrator review before delivery."
+        },
+        {
+          "id": "email-010",
+          "difficulty": 5,
+          "question": "Which authentication method requires physical possession?",
+          "options": [
+            "Password",
+            "SMS code",
+            "Hardware token",
+            "Biometric"
+          ],
+          "correct_answer": 2,
+          "explanation": "Hardware tokens (like YubiKey) require physical possession and are phishing-resistant."
+        },
+        {
+          "id": "email-011",
+          "difficulty": 6,
+          "question": "What is 'graymail'?",
+          "options": [
+            "Spam that looks legitimate",
+            "Marketing emails that are unwanted",
+            "Encrypted spam",
+            "Government emails"
+          ],
+          "correct_answer": 1,
+          "explanation": "Graymail refers to legitimate marketing emails that users find unwanted but aren't spam."
+        },
+        {
+          "id": "email-012",
+          "difficulty": 6,
+          "question": "Which email security gateway feature rewrites links?",
+          "options": [
+            "URL rewriting",
+            "Link protection",
+            "Safe links",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email security gateways can rewrite URLs to point to safe proxy servers."
+        },
+        {
+          "id": "email-013",
+          "difficulty": 7,
+          "question": "What is 'bounce handling' in email security?",
+          "options": [
+            "Blocking bounced emails",
+            "Managing non-delivery notifications",
+            "Preventing email bounces",
+            "Encrypting bounces"
+          ],
+          "correct_answer": 1,
+          "explanation": "Bounce handling manages NDRs (Non-Delivery Reports) to prevent backscatter spam."
+        },
+        {
+          "id": "email-014",
+          "difficulty": 7,
+          "question": "Which standard provides email reputation scoring?",
+          "options": [
+            "SPF",
+            "DKIM",
+            "DMARC",
+            "None of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email reputation is typically provided by third-party services, not standards."
+        },
+        {
+          "id": "email-015",
+          "difficulty": 8,
+          "question": "What is 'email journaling'?",
+          "options": [
+            "Writing email diaries",
+            "Archiving all email communications",
+            "Journaling for compliance",
+            "All of the above"
+          ],
+          "correct_answer": 1,
+          "explanation": "Email journaling creates copies of all emails for compliance and e-discovery purposes."
+        },
+        {
+          "id": "email-016",
+          "difficulty": 8,
+          "question": "Which encryption key type is used for S/MIME?",
+          "options": [
+            "Symmetric only",
+            "Asymmetric only",
+            "Both symmetric and asymmetric",
+            "Hash keys"
+          ],
+          "correct_answer": 2,
+          "explanation": "S/MIME uses both symmetric encryption for content and asymmetric keys for key exchange."
+        },
+        {
+          "id": "email-017",
+          "difficulty": 9,
+          "question": "What is 'ARC' in email authentication?",
+          "options": [
+            "Authenticated Received Chain",
+            "Anti-Relay Chain",
+            "Authenticated Relay Control",
+            "Advanced Relay Chain"
+          ],
+          "correct_answer": 0,
+          "explanation": "ARC (Authenticated Received Chain) maintains authentication through email forwarding."
+        },
+        {
+          "id": "email-018",
+          "difficulty": 9,
+          "question": "Which protocol provides email content filtering?",
+          "options": [
+            "SMTP",
+            "IMAP",
+            "POP3",
+            "MAPI"
+          ],
+          "correct_answer": 3,
+          "explanation": "While all protocols can be filtered, content filtering typically happens at the MTA level."
+        },
+        {
+          "id": "email-019",
+          "difficulty": 10,
+          "question": "What is 'SMTP AUTH'?",
+          "options": [
+            "SMTP Authentication",
+            "Secure Mail Transfer Protocol Authentication",
+            "Simple Mail Transfer Authentication",
+            "Server Mail Transfer Authentication"
+          ],
+          "correct_answer": 0,
+          "explanation": "SMTP AUTH allows clients to authenticate with mail servers before sending."
+        },
+        {
+          "id": "email-020",
+          "difficulty": 10,
+          "question": "Which standard provides email encryption negotiation?",
+          "options": [
+            "STARTTLS",
+            "ENCRYPTTLS",
+            "SECURETLS",
+            "CRYPTTLS"
+          ],
+          "correct_answer": 0,
+          "explanation": "STARTTLS upgrades an insecure connection to a secure one for email transmission."
+        },
+        {
+          "id": "email-021",
+          "difficulty": 1,
+          "question": "What is email authentication?",
+          "options": [
+            "Password verification",
+            "Sender verification",
+            "Message encryption",
+            "Content filtering"
+          ],
+          "correct_answer": 1,
+          "explanation": "Email authentication verifies that email senders are who they claim to be."
+        },
+        {
+          "id": "email-022",
+          "difficulty": 1,
+          "question": "Which protocol secures email transmission?",
+          "options": [
+            "HTTP",
+            "SMTP",
+            "TLS",
+            "FTP"
+          ],
+          "correct_answer": 2,
+          "explanation": "TLS (Transport Layer Security) encrypts email transmission between servers."
+        },
+        {
+          "id": "email-023",
+          "difficulty": 2,
+          "question": "What does DMARC do?",
+          "options": [
+            "Encrypts messages",
+            "Authenticates senders",
+            "Filters spam",
+            "Compresses emails"
+          ],
+          "correct_answer": 1,
+          "explanation": "DMARC provides email authentication and sender policy enforcement."
+        },
+        {
+          "id": "email-024",
+          "difficulty": 2,
+          "question": "Which email header shows routing?",
+          "options": [
+            "From",
+            "Subject",
+            "Received",
+            "To"
+          ],
+          "correct_answer": 2,
+          "explanation": "Received headers show the path an email took through mail servers."
+        },
+        {
+          "id": "email-025",
+          "difficulty": 3,
+          "question": "What is email journaling?",
+          "options": [
+            "Email scheduling",
+            "Message archiving",
+            "Compliance recording",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email journaling creates copies of all emails for compliance and e-discovery."
+        },
+        {
+          "id": "email-026",
+          "difficulty": 3,
+          "question": "Which attachment is safest?",
+          "options": [
+            ".exe files",
+            ".pdf documents",
+            ".txt files",
+            ".docx files"
+          ],
+          "correct_answer": 2,
+          "explanation": "Plain text files cannot contain executable code or macros."
+        },
+        {
+          "id": "email-027",
+          "difficulty": 4,
+          "question": "What is 'graymail'?",
+          "options": [
+            "Spam email",
+            "Marketing email",
+            "Unwanted but legitimate email",
+            "Encrypted email"
+          ],
+          "correct_answer": 2,
+          "explanation": "Graymail is legitimate marketing email that users find unwanted."
+        },
+        {
+          "id": "email-028",
+          "difficulty": 4,
+          "question": "Which standard uses digital signatures?",
+          "options": [
+            "SPF",
+            "DKIM",
+            "DMARC",
+            "TLS"
+          ],
+          "correct_answer": 1,
+          "explanation": "DKIM uses cryptographic signatures to verify email integrity."
+        },
+        {
+          "id": "email-029",
+          "difficulty": 5,
+          "question": "What is email quarantining?",
+          "options": [
+            "Email deletion",
+            "Suspicious email isolation",
+            "Spam blocking",
+            "Email encryption"
+          ],
+          "correct_answer": 1,
+          "explanation": "Quarantining holds suspicious emails for administrator review."
+        },
+        {
+          "id": "email-030",
+          "difficulty": 5,
+          "question": "Which protocol provides secure IMAP?",
+          "options": [
+            "IMAP",
+            "IMAPS",
+            "SMTP",
+            "POP3"
+          ],
+          "correct_answer": 1,
+          "explanation": "IMAPS uses SSL/TLS encryption for secure email access."
+        },
+        {
+          "id": "email-031",
+          "difficulty": 6,
+          "question": "What is 'bounce handling'?",
+          "options": [
+            "Email forwarding",
+            "Non-delivery processing",
+            "Spam management",
+            "Encryption handling"
+          ],
+          "correct_answer": 1,
+          "explanation": "Bounce handling manages non-delivery reports and prevents backscatter."
+        },
+        {
+          "id": "email-032",
+          "difficulty": 6,
+          "question": "Which email security rewrites links?",
+          "options": [
+            "Link encryption",
+            "URL rewriting",
+            "Safe links",
+            "Link protection"
+          ],
+          "correct_answer": 1,
+          "explanation": "URL rewriting converts links to safe proxy servers for checking."
+        },
+        {
+          "id": "email-033",
+          "difficulty": 7,
+          "question": "What is 'ARC' authentication?",
+          "options": [
+            "Authenticated Relay Chain",
+            "Advanced Relay Control",
+            "Authenticated Received Chain",
+            "Anti-Relay Chain"
+          ],
+          "correct_answer": 2,
+          "explanation": "ARC maintains authentication through email forwarding chains."
+        },
+        {
+          "id": "email-034",
+          "difficulty": 7,
+          "question": "Which provides content filtering?",
+          "options": [
+            "SMTP",
+            "Mail Transfer Agent",
+            "Content scanner",
+            "Email client"
+          ],
+          "correct_answer": 1,
+          "explanation": "Mail Transfer Agents (MTAs) perform content filtering at the server level."
+        },
+        {
+          "id": "email-035",
+          "difficulty": 8,
+          "question": "What is 'SMTP AUTH'?",
+          "options": [
+            "SMTP Authentication",
+            "Secure Mail Transfer",
+            "Server Authentication",
+            "Mail Authentication"
+          ],
+          "correct_answer": 0,
+          "explanation": "SMTP AUTH allows clients to authenticate with mail servers."
+        },
+        {
+          "id": "email-036",
+          "difficulty": 8,
+          "question": "Which standard provides MTA-STS?",
+          "options": [
+            "Mail Transfer Agent Strict Transport Security",
+            "Message Transfer Security",
+            "Mail Transport Security",
+            "Message Transport Agent Security"
+          ],
+          "correct_answer": 0,
+          "explanation": "MTA-STS enforces TLS encryption for email transmission."
+        },
+        {
+          "id": "email-037",
+          "difficulty": 9,
+          "question": "What is 'DANE' in email?",
+          "options": [
+            "DNS-based Authentication",
+            "Domain Authentication Encryption",
+            "DNS Authentication of Named Entities",
+            "Domain Authentication Name Encryption"
+          ],
+          "correct_answer": 2,
+          "explanation": "DANE associates X.509 certificates with domain names using DNS."
+        },
+        {
+          "id": "email-038",
+          "difficulty": 9,
+          "question": "Which provides TLS reporting?",
+          "options": [
+            "TLS-RPT",
+            "SMTP-TLS",
+            "TLS-Reporting",
+            "Transport Reporting"
+          ],
+          "correct_answer": 0,
+          "explanation": "TLS-RPT provides reporting on TLS connection successes and failures."
+        },
+        {
+          "id": "email-039",
+          "difficulty": 10,
+          "question": "What is 'SMTPS'?",
+          "options": [
+            "Secure SMTP",
+            "SMTP Security",
+            "Secure Mail Transfer Protocol",
+            "SMTP over SSL"
+          ],
+          "correct_answer": 3,
+          "explanation": "SMTPS is SMTP running over SSL/TLS for secure transmission."
+        },
+        {
+          "id": "email-040",
+          "difficulty": 10,
+          "question": "Which provides quantum-resistant encryption?",
+          "options": [
+            "Post-quantum crypto",
+            "Quantum encryption",
+            "Advanced encryption",
+            "Future encryption"
+          ],
+          "correct_answer": 0,
+          "explanation": "Post-quantum cryptography resists quantum computing attacks."
+        },
+        {
+          "id": "email-041",
+          "difficulty": 1,
+          "question": "What is email spoofing?",
+          "options": [
+            "Email forgery",
+            "Fake sender addresses",
+            "Message alteration",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email spoofing involves forging sender information and message content."
+        },
+        {
+          "id": "email-042",
+          "difficulty": 2,
+          "question": "Which prevents email spoofing?",
+          "options": [
+            "SPF records",
+            "Email filters",
+            "Spam blockers",
+            "Virus scanners"
+          ],
+          "correct_answer": 0,
+          "explanation": "SPF records specify which servers can send email for a domain."
+        },
+        {
+          "id": "email-043",
+          "difficulty": 3,
+          "question": "What is 'email encryption'?",
+          "options": [
+            "Password protection",
+            "Message scrambling",
+            "Content protection",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email encryption protects message content from unauthorized access."
+        },
+        {
+          "id": "email-044",
+          "difficulty": 4,
+          "question": "Which uses public key encryption?",
+          "options": [
+            "Symmetric encryption",
+            "PGP",
+            "Hashing",
+            "Symmetric keys"
+          ],
+          "correct_answer": 1,
+          "explanation": "PGP uses public-key cryptography for email encryption."
+        },
+        {
+          "id": "email-045",
+          "difficulty": 5,
+          "question": "What is 'email reputation'?",
+          "options": [
+            "Sender trustworthiness",
+            "Domain rating",
+            "IP address score",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email reputation evaluates sender trustworthiness and legitimacy."
+        },
+        {
+          "id": "email-046",
+          "difficulty": 6,
+          "question": "Which provides secure POP3?",
+          "options": [
+            "POP3",
+            "POP3S",
+            "Secure POP",
+            "POP-SSL"
+          ],
+          "correct_answer": 1,
+          "explanation": "POP3S uses SSL/TLS encryption for secure email retrieval."
+        },
+        {
+          "id": "email-047",
+          "difficulty": 7,
+          "question": "What is 'email sandboxing'?",
+          "options": [
+            "Safe email storage",
+            "Isolated execution",
+            "Attachment testing",
+            "Content isolation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Email sandboxing executes attachments in isolated environments."
+        },
+        {
+          "id": "email-048",
+          "difficulty": 8,
+          "question": "Which uses certificate pinning?",
+          "options": [
+            "Certificate locking",
+            "HPKP",
+            "Certificate fixing",
+            "Key pinning"
+          ],
+          "correct_answer": 1,
+          "explanation": "HTTP Public Key Pinning associates certificates with domains."
+        },
+        {
+          "id": "email-049",
+          "difficulty": 9,
+          "question": "What is 'SMTP MTA Strict Transport Security'?",
+          "options": [
+            "MTA-STS",
+            "Mail Transport Security",
+            "SMTP Security",
+            "Transport Security"
+          ],
+          "correct_answer": 0,
+          "explanation": "MTA-STS enforces TLS encryption between mail servers."
+        },
+        {
+          "id": "email-050",
+          "difficulty": 10,
+          "question": "Which provides end-to-end encryption?",
+          "options": [
+            "TLS",
+            "PGP",
+            "S/MIME",
+            "Both B and C"
+          ],
+          "correct_answer": 3,
+          "explanation": "Both PGP and S/MIME provide end-to-end email encryption."
+        },
+        {
+          "id": "email-051",
+          "difficulty": 1,
+          "question": "What is 'phishing awareness'?",
+          "options": [
+            "Phishing knowledge",
+            "Attack recognition",
+            "Security training",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Phishing awareness includes knowledge and training to recognize attacks."
+        },
+        {
+          "id": "email-052",
+          "difficulty": 2,
+          "question": "Which email client has built-in security?",
+          "options": [
+            "Basic email clients",
+            "Modern email clients",
+            "All email clients",
+            "Webmail only"
+          ],
+          "correct_answer": 1,
+          "explanation": "Modern email clients include security features like encryption and filtering."
+        },
+        {
+          "id": "email-053",
+          "difficulty": 3,
+          "question": "What is 'email hygiene'?",
+          "options": [
+            "Email cleanliness",
+            "Security practices",
+            "Best practices",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email hygiene refers to security best practices for email use."
+        },
+        {
+          "id": "email-054",
+          "difficulty": 4,
+          "question": "Which prevents business email compromise?",
+          "options": [
+            "Email training",
+            "Verification procedures",
+            "Multi-factor authentication",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Multiple layers of protection prevent business email compromise."
+        },
+        {
+          "id": "email-055",
+          "difficulty": 5,
+          "question": "What is 'zero-trust email'?",
+          "options": [
+            "No email trust",
+            "Verify everything",
+            "Never trust email",
+            "Email verification"
+          ],
+          "correct_answer": 1,
+          "explanation": "Zero-trust email assumes no implicit trust and verifies everything."
+        },
+        {
+          "id": "email-056",
+          "difficulty": 6,
+          "question": "Which uses machine learning for detection?",
+          "options": [
+            "AI email security",
+            "Smart filtering",
+            "Automated analysis",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Modern email security uses AI and machine learning for threat detection."
+        },
+        {
+          "id": "email-057",
+          "difficulty": 7,
+          "question": "What is 'email data loss prevention'?",
+          "options": [
+            "DLP",
+            "Data protection",
+            "Content filtering",
+            "Information leakage prevention"
+          ],
+          "correct_answer": 3,
+          "explanation": "DLP prevents sensitive information from being sent via email."
+        },
+        {
+          "id": "email-058",
+          "difficulty": 8,
+          "question": "Which provides email archiving?",
+          "options": [
+            "Email storage",
+            "Compliance archiving",
+            "Message retention",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email archiving provides long-term storage for compliance."
+        },
+        {
+          "id": "email-059",
+          "difficulty": 9,
+          "question": "What is 'email threat intelligence'?",
+          "options": [
+            "Threat data",
+            "Security information",
+            "Attack patterns",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email threat intelligence provides data about current threats and patterns."
+        },
+        {
+          "id": "email-060",
+          "difficulty": 10,
+          "question": "Which uses behavioral analysis?",
+          "options": [
+            "User monitoring",
+            "Anomaly detection",
+            "Behavioral security",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Behavioral analysis monitors user patterns to detect anomalies."
+        },
+        {
+          "id": "email-061",
+          "difficulty": 1,
+          "question": "What is 'email forwarding' security risk?",
+          "options": [
+            "Message loss",
+            "Authentication breaking",
+            "Content exposure",
+            "Delivery delay"
+          ],
+          "correct_answer": 1,
+          "explanation": "Email forwarding can break authentication mechanisms like DKIM."
+        },
+        {
+          "id": "email-062",
+          "difficulty": 2,
+          "question": "Which email standard prevents spoofing?",
+          "options": [
+            "SPF",
+            "TLS",
+            "POP3",
+            "IMAP"
+          ],
+          "correct_answer": 0,
+          "explanation": "SPF prevents sender address spoofing by verifying IP addresses."
+        },
+        {
+          "id": "email-063",
+          "difficulty": 3,
+          "question": "What is 'email content disarm and reconstruction'?",
+          "options": [
+            "CDR",
+            "Content cleaning",
+            "Safe reconstruction",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "CDR removes malicious content and reconstructs safe versions of files."
+        },
+        {
+          "id": "email-064",
+          "difficulty": 4,
+          "question": "Which provides email continuity?",
+          "options": [
+            "Backup systems",
+            "Business continuity",
+            "Disaster recovery",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email continuity ensures email availability during disruptions."
+        },
+        {
+          "id": "email-065",
+          "difficulty": 5,
+          "question": "What is 'email segmentation'?",
+          "options": [
+            "Message division",
+            "Network separation",
+            "User grouping",
+            "Content separation"
+          ],
+          "correct_answer": 1,
+          "explanation": "Email segmentation separates email networks for security."
+        },
+        {
+          "id": "email-066",
+          "difficulty": 6,
+          "question": "Which uses optical character recognition?",
+          "options": [
+            "OCR scanning",
+            "Image text recognition",
+            "Content analysis",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "OCR extracts text from images for content analysis."
+        },
+        {
+          "id": "email-067",
+          "difficulty": 7,
+          "question": "What is 'email tokenization'?",
+          "options": [
+            "Message tokens",
+            "Sensitive data replacement",
+            "Content markers",
+            "Security tokens"
+          ],
+          "correct_answer": 1,
+          "explanation": "Tokenization replaces sensitive data with non-sensitive tokens."
+        },
+        {
+          "id": "email-068",
+          "difficulty": 8,
+          "question": "Which provides email watermarking?",
+          "options": [
+            "Digital marks",
+            "Invisible tracking",
+            "Content marking",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email watermarking embeds invisible tracking information."
+        },
+        {
+          "id": "email-069",
+          "difficulty": 9,
+          "question": "What is 'email deception detection'?",
+          "options": [
+            "Lie detection",
+            "Deception analysis",
+            "Content verification",
+            "Truth checking"
+          ],
+          "correct_answer": 1,
+          "explanation": "Deception detection analyzes content for manipulative language."
+        },
+        {
+          "id": "email-070",
+          "difficulty": 10,
+          "question": "Which uses quantum-resistant signatures?",
+          "options": [
+            "Post-quantum signatures",
+            "Quantum signatures",
+            "Advanced signatures",
+            "Future signatures"
+          ],
+          "correct_answer": 0,
+          "explanation": "Post-quantum signatures resist quantum computing attacks."
+        },
+        {
+          "id": "email-071",
+          "difficulty": 1,
+          "question": "What is 'email client security'?",
+          "options": [
+            "Client protection",
+            "Software security",
+            "User security",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email client security includes software and user security measures."
+        },
+        {
+          "id": "email-072",
+          "difficulty": 2,
+          "question": "Which email practice is insecure?",
+          "options": [
+            "Password reuse",
+            "Shared accounts",
+            "Auto-forwarding",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "All these practices create security vulnerabilities."
+        },
+        {
+          "id": "email-073",
+          "difficulty": 3,
+          "question": "What is 'email backup encryption'?",
+          "options": [
+            "Backup security",
+            "Encrypted storage",
+            "Secure archives",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email backups should be encrypted for security."
+        },
+        {
+          "id": "email-074",
+          "difficulty": 4,
+          "question": "Which provides email compliance?",
+          "options": [
+            "Regulatory compliance",
+            "Legal requirements",
+            "Industry standards",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email compliance meets legal and regulatory requirements."
+        },
+        {
+          "id": "email-075",
+          "difficulty": 5,
+          "question": "What is 'email rights management'?",
+          "options": [
+            "ERM",
+            "Rights control",
+            "Permission management",
+            "Access control"
+          ],
+          "correct_answer": 2,
+          "explanation": "ERM controls what recipients can do with email content."
+        },
+        {
+          "id": "email-076",
+          "difficulty": 6,
+          "question": "Which uses natural language processing?",
+          "options": [
+            "NLP analysis",
+            "Content understanding",
+            "Language processing",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "NLP analyzes email content for threats and intent."
+        },
+        {
+          "id": "email-077",
+          "difficulty": 7,
+          "question": "What is 'email geolocation'?",
+          "options": [
+            "Location tracking",
+            "IP geolocation",
+            "Sender location",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email geolocation determines sender location from IP addresses."
+        },
+        {
+          "id": "email-078",
+          "difficulty": 8,
+          "question": "Which provides email forensics?",
+          "options": [
+            "Digital investigation",
+            "Email analysis",
+            "Evidence collection",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email forensics investigates security incidents through email analysis."
+        },
+        {
+          "id": "email-079",
+          "difficulty": 9,
+          "question": "What is 'email sentiment analysis'?",
+          "options": [
+            "Emotion detection",
+            "Content mood analysis",
+            "Tone analysis",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Sentiment analysis determines the emotional tone of email content."
+        },
+        {
+          "id": "email-080",
+          "difficulty": 10,
+          "question": "Which uses homomorphic encryption?",
+          "options": [
+            "Encrypted computation",
+            "Homomorphic encryption",
+            "Privacy-preserving computation",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Homomorphic encryption allows computation on encrypted data."
+        },
+        {
+          "id": "email-081",
+          "difficulty": 1,
+          "question": "What is 'email signature security'?",
+          "options": [
+            "Digital signatures",
+            "Signature verification",
+            "Authentication",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email signatures provide authentication and integrity verification."
+        },
+        {
+          "id": "email-082",
+          "difficulty": 2,
+          "question": "Which email header is most important?",
+          "options": [
+            "From address",
+            "Authentication headers",
+            "Subject line",
+            "Date stamp"
+          ],
+          "correct_answer": 1,
+          "explanation": "Authentication headers (SPF, DKIM, DMARC) verify sender legitimacy."
+        },
+        {
+          "id": "email-083",
+          "difficulty": 3,
+          "question": "What is 'email policy enforcement'?",
+          "options": [
+            "Rule application",
+            "Policy compliance",
+            "Security rules",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Policy enforcement applies organizational security rules to email."
+        },
+        {
+          "id": "email-084",
+          "difficulty": 4,
+          "question": "Which provides email auditing?",
+          "options": [
+            "Log monitoring",
+            "Activity tracking",
+            "Compliance checking",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email auditing tracks and monitors email activities."
+        },
+        {
+          "id": "email-085",
+          "difficulty": 5,
+          "question": "What is 'email risk assessment'?",
+          "options": [
+            "Threat evaluation",
+            "Risk analysis",
+            "Vulnerability assessment",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Risk assessment evaluates email security threats and vulnerabilities."
+        },
+        {
+          "id": "email-086",
+          "difficulty": 6,
+          "question": "Which uses pattern recognition?",
+          "options": [
+            "Threat patterns",
+            "Behavior analysis",
+            "Anomaly detection",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Pattern recognition identifies threats through behavior and anomaly analysis."
+        },
+        {
+          "id": "email-087",
+          "difficulty": 7,
+          "question": "What is 'email entropy analysis'?",
+          "options": [
+            "Randomness measurement",
+            "Content analysis",
+            "Encryption detection",
+            "Data complexity"
+          ],
+          "correct_answer": 0,
+          "explanation": "Entropy analysis measures randomness to detect encrypted or compressed content."
+        },
+        {
+          "id": "email-088",
+          "difficulty": 8,
+          "question": "Which provides email traceability?",
+          "options": [
+            "Message tracking",
+            "Delivery confirmation",
+            "Audit trails",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email traceability provides tracking and audit capabilities."
+        },
+        {
+          "id": "email-089",
+          "difficulty": 9,
+          "question": "What is 'email contextual analysis'?",
+          "options": [
+            "Context understanding",
+            "Situation analysis",
+            "Content context",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Contextual analysis considers the broader situation and user behavior."
+        },
+        {
+          "id": "email-090",
+          "difficulty": 10,
+          "question": "Which uses zero-knowledge proofs?",
+          "options": [
+            "Privacy proofs",
+            "Knowledge verification",
+            "Zero-knowledge protocols",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Zero-knowledge proofs verify information without revealing the information itself."
+        },
+        {
+          "id": "email-091",
+          "difficulty": 1,
+          "question": "What is 'email security awareness'?",
+          "options": [
+            "User training",
+            "Security knowledge",
+            "Best practices",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Security awareness includes training and knowledge of best practices."
+        },
+        {
+          "id": "email-092",
+          "difficulty": 2,
+          "question": "Which email habit is risky?",
+          "options": [
+            "Opening attachments",
+            "Clicking links",
+            "Sharing passwords",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "All these habits can lead to security incidents."
+        },
+        {
+          "id": "email-093",
+          "difficulty": 3,
+          "question": "What is 'email incident response'?",
+          "options": [
+            "Security response",
+            "Incident handling",
+            "Breach response",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Incident response handles security incidents involving email."
+        },
+        {
+          "id": "email-094",
+          "difficulty": 4,
+          "question": "Which provides email monitoring?",
+          "options": [
+            "Surveillance",
+            "Activity monitoring",
+            "Compliance monitoring",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email monitoring tracks activities for security and compliance."
+        },
+        {
+          "id": "email-095",
+          "difficulty": 5,
+          "question": "What is 'email governance'?",
+          "options": [
+            "Email management",
+            "Policy governance",
+            "Compliance governance",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email governance manages policies, compliance, and security."
+        },
+        {
+          "id": "email-096",
+          "difficulty": 6,
+          "question": "Which uses collaborative filtering?",
+          "options": [
+            "Group analysis",
+            "Community intelligence",
+            "Shared threat data",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Collaborative filtering uses community data for threat detection."
+        },
+        {
+          "id": "email-097",
+          "difficulty": 7,
+          "question": "What is 'email metadata analysis'?",
+          "options": [
+            "Header analysis",
+            "Data examination",
+            "Information extraction",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Metadata analysis examines email headers and technical data."
+        },
+        {
+          "id": "email-098",
+          "difficulty": 8,
+          "question": "Which provides email resilience?",
+          "options": [
+            "Fault tolerance",
+            "Disaster recovery",
+            "Business continuity",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Email resilience ensures continued operation during disruptions."
+        },
+        {
+          "id": "email-099",
+          "difficulty": 9,
+          "question": "What is 'email predictive analysis'?",
+          "options": [
+            "Future prediction",
+            "Threat forecasting",
+            "Risk prediction",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Predictive analysis forecasts future threats and risks."
+        },
+        {
+          "id": "email-100",
+          "difficulty": 10,
+          "question": "Which uses swarm intelligence?",
+          "options": [
+            "Collective analysis",
+            "Distributed intelligence",
+            "Group decision making",
+            "All of the above"
+          ],
+          "correct_answer": 3,
+          "explanation": "Swarm intelligence uses collective behavior patterns for analysis."
+        }
+      ]
+    }
+  ]
+}

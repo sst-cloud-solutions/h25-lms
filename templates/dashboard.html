@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - TeachMate AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header"><i class="fas fa-shield-alt"></i> TeachMate AI</div>
+            <ul class="nav-menu">
+                <li><a href="/dashboard" class="nav-link active"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                <li><a href="/notes" class="nav-link"><i class="fas fa-book"></i> Study Notes</a></li>
+                <li style="margin-top: auto;"><a href="/" class="nav-link" style="color: red;"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="dash-grid">
+                <div class="card">
+                    <div class="card-header"><h3>Skill Mastery</h3></div>
+                    <canvas id="chart"></canvas>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><h3>Learning Path</h3></div>
+                    {% for m in modules %}
+                    <div class="module-item {% if m.locked %}locked-item{% endif %}">
+                        <div style="flex: 1;">
+                            <div class="mod-header">
+                                <span class="mod-title">{{ m.name }}</span>
+                                {% if m.locked %}
+                                <span class="badge-lock">LOCKED</span>
+                                {% else %}
+                                <span class="badge-open">OPEN</span>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="mod-meta">
+                                Level {{ m.level }}/10 • {{ m.answered }} Questions
+                            </div>
+                            
+                            <div class="progress-track">
+                                <div class="progress-fill" data-progress="{{ m.progress_percent }}"></div>
+                            </div>
+                        </div>
+                        
+                        {% if m.locked %}
+                        <button class="btn-sm disabled" disabled>Locked</button>
+                        {% else %}
+                        <a href="/chat/{{ m.id }}" class="btn-sm">Start</a>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set progress bar widths from data attributes
+        document.querySelectorAll('.progress-fill').forEach(el => {
+            const progress = el.getAttribute('data-progress');
+            if (progress !== null) {
+                el.style.width = progress + '%';
+            }
+        });
+
+        const m = JSON.parse('{{ modules | tojson | safe }}');
+        new Chart(document.getElementById('chart'), {
+            type: 'radar',
+            data: {
+                labels: m.map(x => x.name),
+                datasets: [{
+                    label: 'Level',
+                    data: m.map(x => x.level),
+                    borderColor: '#00C4CC',
+                    backgroundColor: 'rgba(0, 196, 204, 0.2)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    r: {
+                        suggestMax: 10,
+                        ticks: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

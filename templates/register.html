@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - CYBERSECURITY LMS </title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="auth-body">
+    <div class="auth-card">
+        <div class="auth-header">
+            <h2>Create Account</h2>
+            <p>LEARN CYBERSECURITY today</p>
+        </div>
+
+        <div class="auth-tabs">
+            <a href="/" class="auth-tab">Login</a>
+            <a href="/register" class="auth-tab active">Register</a>
+        </div>
+
+        {% if error %} <div class="error-msg">{{ error }}</div> {% endif %}
+
+        <form action="/register" method="post">
+            <div class="form-group">
+                <label>Choose Username</label>
+                <input type="text" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label>Choose Password</label>
+                <input type="password" name="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn-primary">Register Account</button>
+        </form>
+    </div>
+</body>
+</html>
