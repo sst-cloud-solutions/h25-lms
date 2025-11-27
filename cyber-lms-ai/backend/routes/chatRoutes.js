@@ -413,4 +413,119 @@ Return plain text only, no JSON, no markdown.
   }
 });
 
+/**
+ * POST /api/chat/conversation
+ * Conversational AI for cybersecurity mentorship - STRICTLY cybersecurity focused
+ */
+router.post('/conversation', auth(['learner', 'admin']), async (req, res) => {
+  try {
+    const { sessionId, message } = req.body;
+
+    if (!message || !message.trim()) {
+      return res.status(400).json({ message: 'Message is required' });
+    }
+
+    // Get context
+    let session = null;
+    let currentQuestion = null;
+    let categoryInfo = null;
+    let progressData = {
+      totalQuestions: 0,
+      totalCorrect: 0,
+      accuracy: 0
+    };
+
+    if (sessionId) {
+      session = await Session.findById(sessionId);
+      if (session) {
+        progressData.totalQuestions = session.totalAsked;
+        progressData.totalCorrect = session.totalCorrect;
+        progressData.accuracy = session.totalAsked > 0 
+          ? Math.round((session.totalCorrect / session.totalAsked) * 100)
+          : 0;
+
+        if (session.lastQuestion) {
+          currentQuestion = await Question.findById(session.lastQuestion);
+          if (currentQuestion) {
+            categoryInfo = {
+              name: currentQuestion.categoryName,
+              id: currentQuestion.categoryId
+            };
+          }
+        }
+      }
+    }
+
+    // Get all user sessions for overall progress
+    const allSessions = await Session.find({ user: req.user.id });
+    const overallQuestions = allSessions.reduce((sum, s) => sum + s.totalAsked, 0);
+    const overallCorrect = allSessions.reduce((sum, s) => sum + s.totalCorrect, 0);
+    const overallAccuracy = overallQuestions > 0 ? Math.round((overallCorrect / overallQuestions) * 100) : 0;
+
+    // Build conversational prompt - STRICTLY cybersecurity focused
+    const aiPrompt = `You are a professional cybersecurity mentor and educator. You ONLY discuss cybersecurity topics.
+
+Your role:
+- Answer ONLY cybersecurity-related questions (phishing, malware, encryption, networks, security best practices, etc.)
+- Help learners understand cybersecurity concepts without giving away quiz answers
+- Provide study materials and explanations for cybersecurity topics
+- Share progress information when asked
+- Answer basic queries (time, date) briefly
+- POLITELY DECLINE any questions about: politics, entertainment, sports, celebrities, general knowledge unrelated to cybersecurity
+
+Current Training Context:
+${session && categoryInfo ? `- Active course: ${categoryInfo.name}
+- Current session: ${progressData.totalQuestions} questions, ${progressData.totalCorrect} correct (${progressData.accuracy}% accuracy)
+- Difficulty level: ${session.currentDifficulty}
+- Current streak: ${session.correctStreak}` : '- No active training session'}
+
+${currentQuestion ? `- Current question topic: ${currentQuestion.categoryName}
+- Question difficulty: ${currentQuestion.difficulty}
+- Hint: This question is about "${currentQuestion.question.substring(0, 50)}..."` : ''}
+
+Overall Progress:
+- Total sessions: ${allSessions.length}
+- Total questions: ${overallQuestions}
+- Total correct: ${overallCorrect}
+- Overall accuracy: ${overallAccuracy}%
+
+User's Message: "${message}"
+
+Response Guidelines:
+1. IF asking about PROGRESS/PERFORMANCE: Share specific numbers from the data above
+2. IF asking about CURRENT QUESTION: Give hints, explain concepts, but DON'T reveal the answer
+3. IF asking for STUDY MATERIAL: Provide comprehensive cybersecurity learning content on ${categoryInfo ? categoryInfo.name : 'the topic'}
+4. IF asking TIME/DATE: Today is ${new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}, ${new Date().toLocaleTimeString()}
+5. IF asking for DETAILED explanation: Provide 12-20 lines of in-depth cybersecurity content
+6. IF asking for BRIEF explanation: Provide 5-10 lines of concise cybersecurity content
+7. IF asking NON-CYBERSECURITY topics: Say "I'm a specialized cybersecurity mentor. I can only help with cybersecurity topics, training questions, and your progress. Please ask me about security concepts!"
+8. DEFAULT: Provide helpful cybersecurity education (8-12 lines)
+
+Tone: Friendly, encouraging, conversational but professional
+Format: Plain text, NO markdown, NO asterisks, NO special formatting
+Focus: 100% CYBERSECURITY EDUCATION ONLY`;
+
+    let aiResponse = '';
+    try {
+      aiResponse = await aiClient.generateText(aiPrompt);
+      
+      if (!aiResponse || aiResponse.trim().length === 0) {
+        throw new Error('Empty AI response');
+      }
+    } catch (err) {
+      console.error('AI conversation error:', err.message);
+      aiResponse = "I'm having trouble processing your question right now. Please try asking about cybersecurity concepts, your training progress, or the current question!";
+    }
+
+    return res.json({
+      type: 'message',
+      content: aiResponse
+    });
+
+  } catch (err) {
+    console.error('Conversation error:', err.message);
+    return res.status(500).json({ message: 'Server error in conversation' });
+  }
+});
+
 module.exports = router;
